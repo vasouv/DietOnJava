@@ -6,12 +6,15 @@
 
 package dietonjava;
 
+import dietonjava.foodhandling.Food;
+import dietonjava.foodhandling.FoodSQL;
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.event.ActionEvent;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
+import javafx.scene.control.TableView;
 
 /**
  *
@@ -19,11 +22,18 @@ import javafx.scene.control.Label;
  */
 public class MainGUIController implements Initializable {
     
+    FoodSQL fsql = new FoodSQL();
     
+    @FXML
+    private ObservableList<Food> list = FXCollections.observableArrayList();
+    
+    @FXML
+    private TableView<Food> foodDB;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        list = fsql.listFoods();
+        foodDB.setItems(list);
     }    
     
 }
