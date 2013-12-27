@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.paint.*?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="dietonjava.MainGUIController">
   <children>
     <SplitPane dividerPositions="0.5567514677103719" focusTraversable="true" prefHeight="768.0" prefWidth="1024.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
       <items>
@@ -140,17 +140,64 @@
             </TabPane>
             <TableView fx:id="foodDB" prefHeight="475.0" prefWidth="414.0" AnchorPane.bottomAnchor="54.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="237.0">
               <columns>
-                <TableColumn prefWidth="75.0" text="Τροφιμο" />
-                <TableColumn prefWidth="75.0" text="Νερο" />
-                <TableColumn prefWidth="75.0" text="Ενεργεια" />
-                <TableColumn prefWidth="75.0" text="Πρωτεινη" />
-                <TableColumn prefWidth="75.0" text="Λιπιδια" />
-                <TableColumn prefWidth="75.0" text="Σταχτη" />
+                <TableColumn fx:id="ndb_no" prefWidth="75.0" text="NDB" />
+                <TableColumn fx:id="shrt_desc" prefWidth="75.0" text="Description" />
+                <TableColumn fx:id="water_g" prefWidth="75.0" text="Water" />
+                <TableColumn fx:id="energ_kcal" prefWidth="75.0" text="Energy" />
+                <TableColumn fx:id="protein_g" prefWidth="75.0" text="Protein" />
+                <TableColumn fx:id="lipid_tot_g" prefWidth="75.0" text="Lipids" />
+                <TableColumn fx:id="ash_g" prefWidth="75.0" text="Ash" />
+                <TableColumn fx:id="carbohydrt_g" prefWidth="75.0" text="Carbs" />
+                <TableColumn fx:id="fiber_td_g" prefWidth="75.0" text="Fiber" />
+                <TableColumn fx:id="sugar_tot_g" prefWidth="75.0" text="Ash" />
+                <TableColumn fx:id="calcium_mg" prefWidth="75.0" text="Calcium" />
+                <TableColumn fx:id="iron_mg" prefWidth="75.0" text="Iron" />
+                <TableColumn fx:id="magnesium_mg" prefWidth="75.0" text="Magnesium" />
+                <TableColumn fx:id="phosphorus_mg" prefWidth="75.0" text="Phosphorus" />
+                <TableColumn fx:id="potassium_mg" prefWidth="75.0" text="Potassium" />
+                <TableColumn fx:id="sodium_mg" prefWidth="75.0" text="Sodium" />
+                <TableColumn fx:id="zinc_mg" prefWidth="75.0" text="Zinc" />
+                <TableColumn fx:id="copper_mg" prefWidth="75.0" text="Copper" />
+                <TableColumn fx:id="manganese_mg" prefWidth="75.0" text="Manganese" />
+                <TableColumn fx:id="selenium_microg" prefWidth="75.0" text="Selenium" />
+                <TableColumn fx:id="vit_c_mg" prefWidth="75.0" text="VitC" />
+                <TableColumn fx:id="thiamin_mg" prefWidth="75.0" text="Thiamin" />
+                <TableColumn fx:id="riboflavin_mg" prefWidth="75.0" text="Riboflavin" />
+                <TableColumn fx:id="niacin_mg" prefWidth="75.0" text="Niacin" />
+                <TableColumn fx:id="panto_acid_mg" prefWidth="75.0" text="Panto Acid" />
+                <TableColumn fx:id="vit_b6_mg" prefWidth="75.0" text="VitB6" />
+                <TableColumn fx:id="folate_tot_microg" prefWidth="75.0" text="Folate" />
+                <TableColumn fx:id="folic_acid_microg" prefWidth="75.0" text="Folic Acid" />
+                <TableColumn fx:id="food_folate_microg" prefWidth="75.0" text="Food Folate" />
+                <TableColumn fx:id="folate_dfe_microg" prefWidth="75.0" text="Folate DFE" />
+                <TableColumn fx:id="choline_tot_mg" prefWidth="75.0" text="Choline" />
+                <TableColumn fx:id="vit_b12_microg" prefWidth="75.0" text="VitB12" />
+                <TableColumn fx:id="vit_a_iu" prefWidth="75.0" text="VitA IU" />
+                <TableColumn fx:id="vit_a_rae" prefWidth="75.0" text="VitA RAE" />
+                <TableColumn fx:id="retinol_microg" prefWidth="75.0" text="Retinol" />
+                <TableColumn fx:id="alpha_carot_microg" prefWidth="75.0" text="Alpha Carot" />
+                <TableColumn fx:id="beta_carot_microg" prefWidth="75.0" text="Beta Carot" />
+                <TableColumn fx:id="beta_crypt_microg" prefWidth="75.0" text="Beta Crypt" />
+                <TableColumn fx:id="lycopene_microg" prefWidth="75.0" text="Lycopene" />
+                <TableColumn fx:id="lutzea_microg" prefWidth="75.0" text="Lut+Zea" />
+                <TableColumn fx:id="vit_e_mg" prefWidth="75.0" text="VitE" />
+                <TableColumn fx:id="vit_d_microg" prefWidth="75.0" text="VitD" />
+                <TableColumn fx:id="vit_d_iu" prefWidth="75.0" text="VitD IU" />
+                <TableColumn fx:id="vit_k_microg" prefWidth="75.0" text="VitK" />
+                <TableColumn fx:id="fa_sat_g" prefWidth="75.0" text="Fa Sat" />
+                <TableColumn fx:id="fa_mono_g" prefWidth="75.0" text="Fa Mono" />
+                <TableColumn fx:id="fa_poly_g" prefWidth="75.0" text="Fa Poly" />
+                <TableColumn fx:id="cholesterol_mg" prefWidth="75.0" text="Cholesterol" />
+                <TableColumn fx:id="gmwt1" prefWidth="75.0" text="Weight1" />
+                <TableColumn fx:id="gmwt1_desc" prefWidth="75.0" text="Weight1 Desc" />
+                <TableColumn fx:id="gmwt2" prefWidth="75.0" text="Weight2" />
+                <TableColumn fx:id="gmwt2_desc" prefWidth="75.0" text="Weight2 Desc" />
+                <TableColumn fx:id="refuse_pct" prefWidth="75.0" text="Refuse %" />
               </columns>
             </TableView>
             <HBox id="HBox" alignment="CENTER" prefWidth="414.0" spacing="10.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="18.0">
               <children>
-                <Button mnemonicParsing="false" text="Εισαγωγή" />
+                <Button fx:id="add" mnemonicParsing="false" text="Εισαγωγή" />
                 <Button mnemonicParsing="false" text="Επεξεργασια" />
                 <Button mnemonicParsing="false" text="Διαγραφη" />
                 <TextField prefWidth="123.0" promptText="ευρεση">

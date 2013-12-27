@@ -14,9 +14,10 @@ import java.io.Serializable;
  */
 public class Food implements Serializable {
     
-    private String ndb_no, shrt_desc, gmwt1_desc, gmwt2_desc;
-    private double water_g, energ_kcal, protein_g, lipid_tot_g, ash_g, carbohydrt_g;
-    private double fiber_td_g, sugar_tot_g, calcium_mg, iron_mg, magnesium_mg;
+    private String shrt_desc;
+    private String ndb_no, gmwt1_desc, gmwt2_desc;
+    private double water_g, energ_kcal, protein_g, lipid_tot_g, ash_g;
+    private double carbohydrt_g, fiber_td_g, sugar_tot_g, calcium_mg, iron_mg, magnesium_mg;
     private double phosphorus_mg, potassium_mg, sodium_mg, zinc_mg, copper_mg;
     private double manganese_mg, selenium_microg, vit_c_mg, thiamin_mg, riboflavin_mg;
     private double niacin_mg, panto_acid_mg, vit_b6_mg, folate_tot_microg, folic_acid_microg;
@@ -28,20 +29,20 @@ public class Food implements Serializable {
     
     public Food() {}
 
-    public String getNdb_no() {
-        return ndb_no;
-    }
-
-    public void setNdb_no(String ndb_no) {
-        this.ndb_no = ndb_no;
-    }
-
     public String getShrt_desc() {
         return shrt_desc;
     }
 
     public void setShrt_desc(String shrt_desc) {
         this.shrt_desc = shrt_desc;
+    }
+
+    public String getNdb_no() {
+        return ndb_no;
+    }
+
+    public void setNdb_no(String ndb_no) {
+        this.ndb_no = ndb_no;
     }
 
     public String getGmwt1_desc() {
@@ -451,7 +452,7 @@ public class Food implements Serializable {
     public void setRefuse_pct(double refuse_pct) {
         this.refuse_pct = refuse_pct;
     }
-    
+
     
     
 }
