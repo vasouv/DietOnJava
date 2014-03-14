@@ -17,6 +17,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 /**
@@ -32,6 +33,9 @@ public class MainGUIController implements Initializable {
     
     @FXML
     private TableView<Food> foodDB;
+    
+    @FXML
+    private TextField searchBox;
     
     @FXML
     private TableColumn<Food,String> shrt_desc, ndb_no, gmwt1_desc, gmwt2_desc;
@@ -63,7 +67,7 @@ public class MainGUIController implements Initializable {
         list = fsql.listFoods();
         foodDB.setItems(list);
     }
-
+    
     private void createDBCells() {
         ndb_no.setCellValueFactory(new PropertyValueFactory<Food,String>(NutrientNames.NDB_NO));
         shrt_desc.setCellValueFactory(new PropertyValueFactory<Food,String>(NutrientNames.SHRT_DESC));

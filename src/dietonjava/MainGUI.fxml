@@ -16,76 +16,84 @@
           <children>
             <TabPane pickOnBounds="true" prefHeight="766.0" prefWidth="566.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
               <tabs>
-                <Tab text="Δευτερα">
+                <Tab text="Monday">
                   <content>
-                    <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" pickOnBounds="true" prefHeight="180.0" prefWidth="200.0" snapToPixel="false">
+                    <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" pickOnBounds="true" prefHeight="180.0" prefWidth="-1.0" snapToPixel="false">
                       <children>
-                        <TableView pickOnBounds="false" prefHeight="127.0" prefWidth="538.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
-                          <columns>
-                            <TableColumn prefWidth="75.0" text="Column X" />
-                            <TableColumn prefWidth="75.0" text="Column X" />
-                          </columns>
-                        </TableView>
-                        <TableView prefHeight="73.0" prefWidth="538.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="165.0">
-                          <columns>
-                            <TableColumn prefWidth="75.0" text="Column X" />
-                            <TableColumn prefWidth="75.0" text="Column X" />
-                          </columns>
-                        </TableView>
-                        <TableView prefHeight="122.0" prefWidth="538.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="260.0">
-                          <columns>
-                            <TableColumn prefWidth="75.0" text="Column X" />
-                            <TableColumn prefWidth="75.0" text="Column X" />
-                          </columns>
-                        </TableView>
-                        <TableView prefHeight="73.0" prefWidth="538.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="406.0">
-                          <columns>
-                            <TableColumn prefWidth="75.0" text="Column X" />
-                            <TableColumn prefWidth="75.0" text="Column X" />
-                          </columns>
-                        </TableView>
-                        <TableView prefHeight="120.0" prefWidth="538.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="502.0">
-                          <columns>
-                            <TableColumn prefWidth="75.0" text="Column X" />
-                            <TableColumn prefWidth="75.0" text="Column X" />
-                          </columns>
-                        </TableView>
-                        <TableView prefHeight="51.0" prefWidth="538.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="670.0">
-                          <columns>
-                            <TableColumn prefWidth="75.0" text="Column X" />
-                            <TableColumn prefWidth="75.0" text="Column X" />
-                          </columns>
-                        </TableView>
+                        <ScrollPane fitToWidth="true" prefHeight="735.0" prefWidth="566.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <content>
+                            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="1207.0" prefWidth="566.0">
+                              <children>
+                                <TableView prefHeight="227.0" prefWidth="566.0" AnchorPane.bottomAnchor="981.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="-1.0">
+                                  <columns>
+                                    <TableColumn prefWidth="75.0" text="Column X" />
+                                    <TableColumn prefWidth="75.0" text="Column X" />
+                                  </columns>
+                                </TableView>
+                                <TableView prefHeight="109.0" prefWidth="551.0" AnchorPane.bottomAnchor="875.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="223.0">
+                                  <columns>
+                                    <TableColumn prefWidth="75.0" text="Column X" />
+                                    <TableColumn prefWidth="75.0" text="Column X" />
+                                  </columns>
+                                </TableView>
+                                <TableView prefHeight="200.0" prefWidth="551.0" AnchorPane.bottomAnchor="675.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="332.0">
+                                  <columns>
+                                    <TableColumn prefWidth="75.0" text="Column X" />
+                                    <TableColumn prefWidth="75.0" text="Column X" />
+                                  </columns>
+                                </TableView>
+                                <TableView prefHeight="200.0" prefWidth="551.0" AnchorPane.bottomAnchor="370.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="637.0">
+                                  <columns>
+                                    <TableColumn prefWidth="75.0" text="Column X" />
+                                    <TableColumn prefWidth="75.0" text="Column X" />
+                                  </columns>
+                                </TableView>
+                                <TableView prefHeight="105.0" prefWidth="551.0" AnchorPane.bottomAnchor="570.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="532.0">
+                                  <columns>
+                                    <TableColumn prefWidth="75.0" text="Column X" />
+                                    <TableColumn prefWidth="75.0" text="Column X" />
+                                  </columns>
+                                </TableView>
+                                <TableView prefHeight="51.0" prefWidth="566.0" AnchorPane.bottomAnchor="319.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="837.0">
+                                  <columns>
+                                    <TableColumn prefWidth="75.0" text="Column X" />
+                                    <TableColumn prefWidth="75.0" text="Column X" />
+                                  </columns>
+                                </TableView>
+                              </children>
+                            </AnchorPane>
+                          </content>
+                        </ScrollPane>
                       </children>
                     </AnchorPane>
                   </content>
                 </Tab>
-                <Tab text="Τριτη">
+                <Tab text="Tuesday">
                   <content>
                     <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
                   </content>
                 </Tab>
-                <Tab text="Τεταρτη">
+                <Tab text="Wednesday">
                   <content>
                     <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
                   </content>
                 </Tab>
-                <Tab text="Πεμπτη">
+                <Tab text="Thursday">
                   <content>
                     <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
                   </content>
                 </Tab>
-                <Tab text="Παρασκευη">
+                <Tab text="Friday">
                   <content>
                     <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
                   </content>
                 </Tab>
-                <Tab text="Σαββατο">
+                <Tab text="Saturday">
                   <content>
                     <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
                   </content>
                 </Tab>
-                <Tab text="Κυριακη">
+                <Tab text="Sunday">
                   <content>
                     <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
                   </content>
@@ -98,17 +106,17 @@
           <children>
             <HBox id="HBox" alignment="CENTER" prefWidth="422.0" spacing="15.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0">
               <children>
-                <Button mnemonicParsing="false" text="Δημιουργια" />
-                <Button mnemonicParsing="false" text="Αποθήκευση" />
-                <Button mnemonicParsing="false" text="Ανοιγμα" />
-                <Button mnemonicParsing="false" text="Εκτύπωση" />
+                <Button mnemonicParsing="false" text="New" />
+                <Button mnemonicParsing="false" text="Save" />
+                <Button mnemonicParsing="false" text="Open" />
+                <Button mnemonicParsing="false" text="Print" />
                 <Button mnemonicParsing="false" text="PDF" />
               </children>
             </HBox>
             <Separator prefHeight="6.0" prefWidth="414.0" AnchorPane.leftAnchor="18.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="49.0" />
-            <TabPane prefHeight="173.0" prefWidth="422.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="55.0">
+            <TabPane prefHeight="173.0" prefWidth="422.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="55.0">
               <tabs>
-                <Tab text="Προφίλ 1">
+                <Tab text="Profile 1">
                   <content>
                     <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                       <children>
@@ -117,21 +125,21 @@
                             <Image url="@../Pictures/Online%20Profiles/vasouv51e348af57764.png" />
                           </image>
                         </ImageView>
-                        <TextField layoutX="111.0" layoutY="15.0" prefWidth="130.0" promptText="Ονομα" />
-                        <TextField layoutX="111.0" layoutY="47.0" prefWidth="130.0" promptText="Επώνυμο" />
-                        <TextField layoutX="111.0" layoutY="78.0" prefWidth="130.0" promptText="Διεύθυνση" />
-                        <TextField layoutX="111.0" layoutY="107.0" prefWidth="130.0" promptText="Τηλέφωνο" />
-                        <TextField layoutX="256.0" layoutY="47.0" prefWidth="152.0" promptText="Ημερομηνία" />
-                        <TextArea layoutX="257.0" layoutY="78.0" prefHeight="51.0" prefWidth="147.0" promptText="Σημειώσεις" wrapText="true" />
-                        <TextField layoutX="256.0" layoutY="15.0" prefWidth="44.0" promptText="Βαρος" />
-                        <TextField layoutX="313.0" layoutY="15.0" prefWidth="44.0" promptText="Ηλικια" />
-                        <TextField layoutX="363.0" layoutY="15.0" prefWidth="41.0" promptText="Υψος" />
-                        <Button layoutX="30.0" layoutY="109.0" mnemonicParsing="false" text="Εικονα" />
+                        <TextField layoutX="111.0" layoutY="15.0" prefWidth="130.0" promptText="Name" />
+                        <TextField layoutX="111.0" layoutY="47.0" prefWidth="130.0" promptText="Surname" />
+                        <TextField layoutX="111.0" layoutY="78.0" prefWidth="130.0" promptText="Address" />
+                        <TextField layoutX="111.0" layoutY="107.0" prefWidth="130.0" promptText="Tel" />
+                        <TextField layoutX="256.0" layoutY="47.0" prefWidth="152.0" promptText="Date" />
+                        <TextArea layoutX="257.0" layoutY="78.0" prefHeight="51.0" prefWidth="147.0" promptText="Notes" wrapText="true" />
+                        <TextField layoutX="256.0" layoutY="15.0" prefWidth="44.0" promptText="Kg" />
+                        <TextField layoutX="313.0" layoutY="15.0" prefWidth="44.0" promptText="Age" />
+                        <TextField layoutX="363.0" layoutY="15.0" prefWidth="41.0" promptText="Height" />
+                        <Button layoutX="30.0" layoutY="109.0" mnemonicParsing="false" text="Pic" />
                       </children>
                     </AnchorPane>
                   </content>
                 </Tab>
-                <Tab text="Προφίλ 2">
+                <Tab text="Profile 2">
                   <content>
                     <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
                   </content>
@@ -140,67 +148,67 @@
             </TabPane>
             <TableView fx:id="foodDB" prefHeight="475.0" prefWidth="414.0" AnchorPane.bottomAnchor="54.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="237.0">
               <columns>
-                <TableColumn fx:id="ndb_no" prefWidth="75.0" text="NDB" />
-                <TableColumn fx:id="shrt_desc" prefWidth="75.0" text="Description" />
-                <TableColumn fx:id="water_g" prefWidth="75.0" text="Water" />
-                <TableColumn fx:id="energ_kcal" prefWidth="75.0" text="Energy" />
-                <TableColumn fx:id="protein_g" prefWidth="75.0" text="Protein" />
-                <TableColumn fx:id="lipid_tot_g" prefWidth="75.0" text="Lipids" />
-                <TableColumn fx:id="ash_g" prefWidth="75.0" text="Ash" />
-                <TableColumn fx:id="carbohydrt_g" prefWidth="75.0" text="Carbs" />
-                <TableColumn fx:id="fiber_td_g" prefWidth="75.0" text="Fiber" />
-                <TableColumn fx:id="sugar_tot_g" prefWidth="75.0" text="Ash" />
-                <TableColumn fx:id="calcium_mg" prefWidth="75.0" text="Calcium" />
-                <TableColumn fx:id="iron_mg" prefWidth="75.0" text="Iron" />
-                <TableColumn fx:id="magnesium_mg" prefWidth="75.0" text="Magnesium" />
-                <TableColumn fx:id="phosphorus_mg" prefWidth="75.0" text="Phosphorus" />
-                <TableColumn fx:id="potassium_mg" prefWidth="75.0" text="Potassium" />
-                <TableColumn fx:id="sodium_mg" prefWidth="75.0" text="Sodium" />
-                <TableColumn fx:id="zinc_mg" prefWidth="75.0" text="Zinc" />
-                <TableColumn fx:id="copper_mg" prefWidth="75.0" text="Copper" />
-                <TableColumn fx:id="manganese_mg" prefWidth="75.0" text="Manganese" />
-                <TableColumn fx:id="selenium_microg" prefWidth="75.0" text="Selenium" />
-                <TableColumn fx:id="vit_c_mg" prefWidth="75.0" text="VitC" />
-                <TableColumn fx:id="thiamin_mg" prefWidth="75.0" text="Thiamin" />
-                <TableColumn fx:id="riboflavin_mg" prefWidth="75.0" text="Riboflavin" />
-                <TableColumn fx:id="niacin_mg" prefWidth="75.0" text="Niacin" />
-                <TableColumn fx:id="panto_acid_mg" prefWidth="75.0" text="Panto Acid" />
-                <TableColumn fx:id="vit_b6_mg" prefWidth="75.0" text="VitB6" />
-                <TableColumn fx:id="folate_tot_microg" prefWidth="75.0" text="Folate" />
-                <TableColumn fx:id="folic_acid_microg" prefWidth="75.0" text="Folic Acid" />
-                <TableColumn fx:id="food_folate_microg" prefWidth="75.0" text="Food Folate" />
-                <TableColumn fx:id="folate_dfe_microg" prefWidth="75.0" text="Folate DFE" />
-                <TableColumn fx:id="choline_tot_mg" prefWidth="75.0" text="Choline" />
-                <TableColumn fx:id="vit_b12_microg" prefWidth="75.0" text="VitB12" />
-                <TableColumn fx:id="vit_a_iu" prefWidth="75.0" text="VitA IU" />
-                <TableColumn fx:id="vit_a_rae" prefWidth="75.0" text="VitA RAE" />
-                <TableColumn fx:id="retinol_microg" prefWidth="75.0" text="Retinol" />
-                <TableColumn fx:id="alpha_carot_microg" prefWidth="75.0" text="Alpha Carot" />
-                <TableColumn fx:id="beta_carot_microg" prefWidth="75.0" text="Beta Carot" />
-                <TableColumn fx:id="beta_crypt_microg" prefWidth="75.0" text="Beta Crypt" />
-                <TableColumn fx:id="lycopene_microg" prefWidth="75.0" text="Lycopene" />
-                <TableColumn fx:id="lutzea_microg" prefWidth="75.0" text="Lut+Zea" />
-                <TableColumn fx:id="vit_e_mg" prefWidth="75.0" text="VitE" />
-                <TableColumn fx:id="vit_d_microg" prefWidth="75.0" text="VitD" />
-                <TableColumn fx:id="vit_d_iu" prefWidth="75.0" text="VitD IU" />
-                <TableColumn fx:id="vit_k_microg" prefWidth="75.0" text="VitK" />
-                <TableColumn fx:id="fa_sat_g" prefWidth="75.0" text="Fa Sat" />
-                <TableColumn fx:id="fa_mono_g" prefWidth="75.0" text="Fa Mono" />
-                <TableColumn fx:id="fa_poly_g" prefWidth="75.0" text="Fa Poly" />
-                <TableColumn fx:id="cholesterol_mg" prefWidth="75.0" text="Cholesterol" />
-                <TableColumn fx:id="gmwt1" prefWidth="75.0" text="Weight1" />
-                <TableColumn fx:id="gmwt1_desc" prefWidth="75.0" text="Weight1 Desc" />
-                <TableColumn fx:id="gmwt2" prefWidth="75.0" text="Weight2" />
-                <TableColumn fx:id="gmwt2_desc" prefWidth="75.0" text="Weight2 Desc" />
-                <TableColumn fx:id="refuse_pct" prefWidth="75.0" text="Refuse %" />
+                <TableColumn prefWidth="75.0" text="NDB" fx:id="ndb_no" />
+                <TableColumn prefWidth="75.0" text="Description" fx:id="shrt_desc" />
+                <TableColumn prefWidth="75.0" text="Water" fx:id="water_g" />
+                <TableColumn prefWidth="75.0" text="Energy" fx:id="energ_kcal" />
+                <TableColumn prefWidth="75.0" text="Protein" fx:id="protein_g" />
+                <TableColumn prefWidth="75.0" text="Lipids" fx:id="lipid_tot_g" />
+                <TableColumn prefWidth="75.0" text="Ash" fx:id="ash_g" />
+                <TableColumn prefWidth="75.0" text="Carbs" fx:id="carbohydrt_g" />
+                <TableColumn prefWidth="75.0" text="Fiber" fx:id="fiber_td_g" />
+                <TableColumn prefWidth="75.0" text="Ash" fx:id="sugar_tot_g" />
+                <TableColumn prefWidth="75.0" text="Calcium" fx:id="calcium_mg" />
+                <TableColumn prefWidth="75.0" text="Iron" fx:id="iron_mg" />
+                <TableColumn prefWidth="75.0" text="Magnesium" fx:id="magnesium_mg" />
+                <TableColumn prefWidth="75.0" text="Phosphorus" fx:id="phosphorus_mg" />
+                <TableColumn prefWidth="75.0" text="Potassium" fx:id="potassium_mg" />
+                <TableColumn prefWidth="75.0" text="Sodium" fx:id="sodium_mg" />
+                <TableColumn prefWidth="75.0" text="Zinc" fx:id="zinc_mg" />
+                <TableColumn prefWidth="75.0" text="Copper" fx:id="copper_mg" />
+                <TableColumn prefWidth="75.0" text="Manganese" fx:id="manganese_mg" />
+                <TableColumn prefWidth="75.0" text="Selenium" fx:id="selenium_microg" />
+                <TableColumn prefWidth="75.0" text="VitC" fx:id="vit_c_mg" />
+                <TableColumn prefWidth="75.0" text="Thiamin" fx:id="thiamin_mg" />
+                <TableColumn prefWidth="75.0" text="Riboflavin" fx:id="riboflavin_mg" />
+                <TableColumn prefWidth="75.0" text="Niacin" fx:id="niacin_mg" />
+                <TableColumn prefWidth="75.0" text="Panto Acid" fx:id="panto_acid_mg" />
+                <TableColumn prefWidth="75.0" text="VitB6" fx:id="vit_b6_mg" />
+                <TableColumn prefWidth="75.0" text="Folate" fx:id="folate_tot_microg" />
+                <TableColumn prefWidth="75.0" text="Folic Acid" fx:id="folic_acid_microg" />
+                <TableColumn prefWidth="75.0" text="Food Folate" fx:id="food_folate_microg" />
+                <TableColumn prefWidth="75.0" text="Folate DFE" fx:id="folate_dfe_microg" />
+                <TableColumn prefWidth="75.0" text="Choline" fx:id="choline_tot_mg" />
+                <TableColumn prefWidth="75.0" text="VitB12" fx:id="vit_b12_microg" />
+                <TableColumn prefWidth="75.0" text="VitA IU" fx:id="vit_a_iu" />
+                <TableColumn prefWidth="75.0" text="VitA RAE" fx:id="vit_a_rae" />
+                <TableColumn prefWidth="75.0" text="Retinol" fx:id="retinol_microg" />
+                <TableColumn prefWidth="75.0" text="Alpha Carot" fx:id="alpha_carot_microg" />
+                <TableColumn prefWidth="75.0" text="Beta Carot" fx:id="beta_carot_microg" />
+                <TableColumn prefWidth="75.0" text="Beta Crypt" fx:id="beta_crypt_microg" />
+                <TableColumn prefWidth="75.0" text="Lycopene" fx:id="lycopene_microg" />
+                <TableColumn prefWidth="75.0" text="Lut+Zea" fx:id="lutzea_microg" />
+                <TableColumn prefWidth="75.0" text="VitE" fx:id="vit_e_mg" />
+                <TableColumn prefWidth="75.0" text="VitD" fx:id="vit_d_microg" />
+                <TableColumn prefWidth="75.0" text="VitD IU" fx:id="vit_d_iu" />
+                <TableColumn prefWidth="75.0" text="VitK" fx:id="vit_k_microg" />
+                <TableColumn prefWidth="75.0" text="Fa Sat" fx:id="fa_sat_g" />
+                <TableColumn prefWidth="75.0" text="Fa Mono" fx:id="fa_mono_g" />
+                <TableColumn prefWidth="75.0" text="Fa Poly" fx:id="fa_poly_g" />
+                <TableColumn prefWidth="75.0" text="Cholesterol" fx:id="cholesterol_mg" />
+                <TableColumn prefWidth="75.0" text="Weight1" fx:id="gmwt1" />
+                <TableColumn prefWidth="75.0" text="Weight1 Desc" fx:id="gmwt1_desc" />
+                <TableColumn prefWidth="75.0" text="Weight2" fx:id="gmwt2" />
+                <TableColumn prefWidth="75.0" text="Weight2 Desc" fx:id="gmwt2_desc" />
+                <TableColumn prefWidth="75.0" text="Refuse %" fx:id="refuse_pct" />
               </columns>
             </TableView>
             <HBox id="HBox" alignment="CENTER" prefWidth="414.0" spacing="10.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="18.0">
               <children>
-                <Button fx:id="add" mnemonicParsing="false" text="Εισαγωγή" />
-                <Button mnemonicParsing="false" text="Επεξεργασια" />
-                <Button mnemonicParsing="false" text="Διαγραφη" />
-                <TextField prefWidth="123.0" promptText="ευρεση">
+                <Button fx:id="add" mnemonicParsing="false" text="Add" />
+                <Button mnemonicParsing="false" text="Edit" />
+                <Button mnemonicParsing="false" text="Delete" />
+                <TextField fx:id="searchBox" prefWidth="123.0" promptText="search">
                   <HBox.margin>
                     <Insets left="15.0" />
                   </HBox.margin>
