@@ -208,7 +208,7 @@
                 <Button fx:id="add" mnemonicParsing="false" text="Add" />
                 <Button mnemonicParsing="false" text="Edit" />
                 <Button mnemonicParsing="false" text="Delete" />
-                <TextField fx:id="searchBox" prefWidth="123.0" promptText="search">
+                <TextField fx:id="searchBox" prefWidth="123.0" promptText="search" onKeyPressed="#searchTerm" >
                   <HBox.margin>
                     <Insets left="15.0" />
                   </HBox.margin>

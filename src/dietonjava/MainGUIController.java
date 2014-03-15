@@ -19,6 +19,8 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 
 /**
  *
@@ -66,6 +68,15 @@ public class MainGUIController implements Initializable {
         
         list = fsql.listFoods();
         foodDB.setItems(list);
+    }
+    
+    @FXML
+    private void searchTerm(KeyEvent event) {
+        if(event.getCode() == KeyCode.ENTER) {
+            createDBCells();
+            list = fsql.searchDB(searchBox.getText());
+            foodDB.setItems(list);
+        }
     }
     
     private void createDBCells() {

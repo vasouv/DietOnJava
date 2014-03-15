@@ -43,16 +43,22 @@ public class FoodSQL {
 
     public ObservableList<Food> searchDB(String term) {
 
+        establishConnection();
+        
         ObservableList<Food> search = FXCollections.observableArrayList();
 
         ResultSet rs = null;
+        
+        String sqlQuery = new String();
 
         try {
-            if (term.isEmpty()) {
-                rs = statement.executeQuery("select * from foods");
+            if (term == null) {
+                sqlQuery = "select * from foods";
             } else {
-                rs = statement.executeQuery("select * from foods where shrt_desc like '%" + term + "%';");
+                sqlQuery = "select * from foods where short_desc like '%" + term + "%';";
             }
+            
+            rs = statement.executeQuery(sqlQuery);
 
             while (rs.next()) {
                 Food foo = new Food();
