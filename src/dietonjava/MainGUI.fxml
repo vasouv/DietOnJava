@@ -24,40 +24,82 @@
                           <content>
                             <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="1207.0" prefWidth="566.0">
                               <children>
-                                <TableView prefHeight="227.0" prefWidth="566.0" AnchorPane.bottomAnchor="981.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="-1.0">
+                                <TableView fx:id="monBreakfast" prefHeight="227.0" prefWidth="566.0" AnchorPane.bottomAnchor="981.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="-1.0">
                                   <columns>
-                                    <TableColumn prefWidth="75.0" text="Column X" />
-                                    <TableColumn prefWidth="75.0" text="Column X" />
+                                    <TableColumn prefWidth="75.0" text="NDB" fx:id="ndb_noMBr" />
+                                    <TableColumn prefWidth="75.0" text="Description" fx:id="shrt_descMBr" />
+                                    <TableColumn prefWidth="75.0" text="Energy" fx:id="energ_kcalMBr" />
+                                    <TableColumn prefWidth="75.0" text="Protein" fx:id="protein_gMBr" />
+                                    <TableColumn prefWidth="75.0" text="Lipids" fx:id="lipid_tot_gMBr" />
+                                    <TableColumn prefWidth="75.0" text="Carbs" fx:id="carbohydrt_gMBr" />
+                                    <TableColumn prefWidth="75.0" text="Fiber" fx:id="fiber_td_gMBr" />
+                                    <TableColumn prefWidth="75.0" text="Calcium" fx:id="calcium_mgMBr" />
+                                    <TableColumn prefWidth="75.0" text="Iron" fx:id="iron_mgMBr" />
                                   </columns>
                                 </TableView>
-                                <TableView prefHeight="109.0" prefWidth="551.0" AnchorPane.bottomAnchor="875.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="223.0">
+                                <TableView fx:id="monBreakfast2" prefHeight="109.0" prefWidth="551.0" AnchorPane.bottomAnchor="875.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="223.0">
                                   <columns>
-                                    <TableColumn prefWidth="75.0" text="Column X" />
-                                    <TableColumn prefWidth="75.0" text="Column X" />
+                                    <TableColumn prefWidth="75.0" text="NDB" fx:id="ndb_noMBr2" />
+                                    <TableColumn prefWidth="75.0" text="Description" fx:id="shrt_descMBr2" />
+                                    <TableColumn prefWidth="75.0" text="Energy" fx:id="energ_kcalMBr2" />
+                                    <TableColumn prefWidth="75.0" text="Protein" fx:id="protein_gMBr2" />
+                                    <TableColumn prefWidth="75.0" text="Lipids" fx:id="lipid_tot_gMBr2" />
+                                    <TableColumn prefWidth="75.0" text="Carbs" fx:id="carbohydrt_gMBr2" />
+                                    <TableColumn prefWidth="75.0" text="Fiber" fx:id="fiber_td_gMBr2" />
+                                    <TableColumn prefWidth="75.0" text="Calcium" fx:id="calcium_mgMBr2" />
+                                    <TableColumn prefWidth="75.0" text="Iron" fx:id="iron_mgMBr2" />
                                   </columns>
                                 </TableView>
-                                <TableView prefHeight="200.0" prefWidth="551.0" AnchorPane.bottomAnchor="675.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="332.0">
+                                <TableView fx:id="monLunch" prefHeight="200.0" prefWidth="551.0" AnchorPane.bottomAnchor="675.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="332.0">
                                   <columns>
-                                    <TableColumn prefWidth="75.0" text="Column X" />
-                                    <TableColumn prefWidth="75.0" text="Column X" />
+                                    <TableColumn prefWidth="75.0" text="NDB" fx:id="ndb_noML" />
+                                    <TableColumn prefWidth="75.0" text="Description" fx:id="shrt_descML" />
+                                    <TableColumn prefWidth="75.0" text="Energy" fx:id="energ_kcalML" />
+                                    <TableColumn prefWidth="75.0" text="Protein" fx:id="protein_gML" />
+                                    <TableColumn prefWidth="75.0" text="Lipids" fx:id="lipid_tot_gML" />
+                                    <TableColumn prefWidth="75.0" text="Carbs" fx:id="carbohydrt_gML" />
+                                    <TableColumn prefWidth="75.0" text="Fiber" fx:id="fiber_td_gML" />
+                                    <TableColumn prefWidth="75.0" text="Calcium" fx:id="calcium_mgML" />
+                                    <TableColumn prefWidth="75.0" text="Iron" fx:id="iron_mgML" />
                                   </columns>
                                 </TableView>
-                                <TableView prefHeight="200.0" prefWidth="551.0" AnchorPane.bottomAnchor="370.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="637.0">
+                                <TableView fx:id="monLunch2" prefHeight="200.0" prefWidth="551.0" AnchorPane.bottomAnchor="370.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="637.0">
                                   <columns>
-                                    <TableColumn prefWidth="75.0" text="Column X" />
-                                    <TableColumn prefWidth="75.0" text="Column X" />
+                                    <TableColumn prefWidth="75.0" text="NDB" fx:id="ndb_noML2" />
+                                    <TableColumn prefWidth="75.0" text="Description" fx:id="shrt_descML2" />
+                                    <TableColumn prefWidth="75.0" text="Energy" fx:id="energ_kcalML2" />
+                                    <TableColumn prefWidth="75.0" text="Protein" fx:id="protein_gML2" />
+                                    <TableColumn prefWidth="75.0" text="Lipids" fx:id="lipid_tot_gML2" />
+                                    <TableColumn prefWidth="75.0" text="Carbs" fx:id="carbohydrt_gML2" />
+                                    <TableColumn prefWidth="75.0" text="Fiber" fx:id="fiber_td_gML2" />
+                                    <TableColumn prefWidth="75.0" text="Calcium" fx:id="calcium_mgML2" />
+                                    <TableColumn prefWidth="75.0" text="Iron" fx:id="iron_mgML2" />
                                   </columns>
                                 </TableView>
-                                <TableView prefHeight="105.0" prefWidth="551.0" AnchorPane.bottomAnchor="570.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="532.0">
+                                <TableView fx:id="monDinner" prefHeight="105.0" prefWidth="551.0" AnchorPane.bottomAnchor="570.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="532.0">
                                   <columns>
-                                    <TableColumn prefWidth="75.0" text="Column X" />
-                                    <TableColumn prefWidth="75.0" text="Column X" />
+                                    <TableColumn prefWidth="75.0" text="NDB" fx:id="ndb_noMD" />
+                                    <TableColumn prefWidth="75.0" text="Description" fx:id="shrt_descMD" />
+                                    <TableColumn prefWidth="75.0" text="Energy" fx:id="energ_kcalMD" />
+                                    <TableColumn prefWidth="75.0" text="Protein" fx:id="protein_gMD" />
+                                    <TableColumn prefWidth="75.0" text="Lipids" fx:id="lipid_tot_gMD" />
+                                    <TableColumn prefWidth="75.0" text="Carbs" fx:id="carbohydrt_gMD" />
+                                    <TableColumn prefWidth="75.0" text="Fiber" fx:id="fiber_td_gMD" />
+                                    <TableColumn prefWidth="75.0" text="Calcium" fx:id="calcium_mgMD" />
+                                    <TableColumn prefWidth="75.0" text="Iron" fx:id="iron_mgMD" />
                                   </columns>
                                 </TableView>
-                                <TableView prefHeight="51.0" prefWidth="566.0" AnchorPane.bottomAnchor="319.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="837.0">
+                                <TableView fx:id="monTotal" prefHeight="51.0" prefWidth="566.0" AnchorPane.bottomAnchor="319.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="837.0">
                                   <columns>
-                                    <TableColumn prefWidth="75.0" text="Column X" />
-                                    <TableColumn prefWidth="75.0" text="Column X" />
+                                    <TableColumn prefWidth="75.0" text="NDB" fx:id="ndb_noMT" />
+                                    <TableColumn prefWidth="75.0" text="Description" fx:id="shrt_descMT" />
+                                    <TableColumn prefWidth="75.0" text="Energy" fx:id="energ_kcalMT" />
+                                    <TableColumn prefWidth="75.0" text="Protein" fx:id="protein_gMT" />
+                                    <TableColumn prefWidth="75.0" text="Lipids" fx:id="lipid_tot_gMT" />
+                                    <TableColumn prefWidth="75.0" text="Carbs" fx:id="carbohydrt_gMT" />
+                                    <TableColumn prefWidth="75.0" text="Fiber" fx:id="fiber_td_gMT" />
+                                    <TableColumn prefWidth="75.0" text="Calcium" fx:id="calcium_mgMT" />
+                                    <TableColumn prefWidth="75.0" text="Iron" fx:id="iron_mgMT" />
                                   </columns>
                                 </TableView>
                               </children>
@@ -150,57 +192,13 @@
               <columns>
                 <TableColumn prefWidth="75.0" text="NDB" fx:id="ndb_no" />
                 <TableColumn prefWidth="75.0" text="Description" fx:id="shrt_desc" />
-                <TableColumn prefWidth="75.0" text="Water" fx:id="water_g" />
                 <TableColumn prefWidth="75.0" text="Energy" fx:id="energ_kcal" />
                 <TableColumn prefWidth="75.0" text="Protein" fx:id="protein_g" />
                 <TableColumn prefWidth="75.0" text="Lipids" fx:id="lipid_tot_g" />
-                <TableColumn prefWidth="75.0" text="Ash" fx:id="ash_g" />
                 <TableColumn prefWidth="75.0" text="Carbs" fx:id="carbohydrt_g" />
                 <TableColumn prefWidth="75.0" text="Fiber" fx:id="fiber_td_g" />
-                <TableColumn prefWidth="75.0" text="Ash" fx:id="sugar_tot_g" />
                 <TableColumn prefWidth="75.0" text="Calcium" fx:id="calcium_mg" />
                 <TableColumn prefWidth="75.0" text="Iron" fx:id="iron_mg" />
-                <TableColumn prefWidth="75.0" text="Magnesium" fx:id="magnesium_mg" />
-                <TableColumn prefWidth="75.0" text="Phosphorus" fx:id="phosphorus_mg" />
-                <TableColumn prefWidth="75.0" text="Potassium" fx:id="potassium_mg" />
-                <TableColumn prefWidth="75.0" text="Sodium" fx:id="sodium_mg" />
-                <TableColumn prefWidth="75.0" text="Zinc" fx:id="zinc_mg" />
-                <TableColumn prefWidth="75.0" text="Copper" fx:id="copper_mg" />
-                <TableColumn prefWidth="75.0" text="Manganese" fx:id="manganese_mg" />
-                <TableColumn prefWidth="75.0" text="Selenium" fx:id="selenium_microg" />
-                <TableColumn prefWidth="75.0" text="VitC" fx:id="vit_c_mg" />
-                <TableColumn prefWidth="75.0" text="Thiamin" fx:id="thiamin_mg" />
-                <TableColumn prefWidth="75.0" text="Riboflavin" fx:id="riboflavin_mg" />
-                <TableColumn prefWidth="75.0" text="Niacin" fx:id="niacin_mg" />
-                <TableColumn prefWidth="75.0" text="Panto Acid" fx:id="panto_acid_mg" />
-                <TableColumn prefWidth="75.0" text="VitB6" fx:id="vit_b6_mg" />
-                <TableColumn prefWidth="75.0" text="Folate" fx:id="folate_tot_microg" />
-                <TableColumn prefWidth="75.0" text="Folic Acid" fx:id="folic_acid_microg" />
-                <TableColumn prefWidth="75.0" text="Food Folate" fx:id="food_folate_microg" />
-                <TableColumn prefWidth="75.0" text="Folate DFE" fx:id="folate_dfe_microg" />
-                <TableColumn prefWidth="75.0" text="Choline" fx:id="choline_tot_mg" />
-                <TableColumn prefWidth="75.0" text="VitB12" fx:id="vit_b12_microg" />
-                <TableColumn prefWidth="75.0" text="VitA IU" fx:id="vit_a_iu" />
-                <TableColumn prefWidth="75.0" text="VitA RAE" fx:id="vit_a_rae" />
-                <TableColumn prefWidth="75.0" text="Retinol" fx:id="retinol_microg" />
-                <TableColumn prefWidth="75.0" text="Alpha Carot" fx:id="alpha_carot_microg" />
-                <TableColumn prefWidth="75.0" text="Beta Carot" fx:id="beta_carot_microg" />
-                <TableColumn prefWidth="75.0" text="Beta Crypt" fx:id="beta_crypt_microg" />
-                <TableColumn prefWidth="75.0" text="Lycopene" fx:id="lycopene_microg" />
-                <TableColumn prefWidth="75.0" text="Lut+Zea" fx:id="lutzea_microg" />
-                <TableColumn prefWidth="75.0" text="VitE" fx:id="vit_e_mg" />
-                <TableColumn prefWidth="75.0" text="VitD" fx:id="vit_d_microg" />
-                <TableColumn prefWidth="75.0" text="VitD IU" fx:id="vit_d_iu" />
-                <TableColumn prefWidth="75.0" text="VitK" fx:id="vit_k_microg" />
-                <TableColumn prefWidth="75.0" text="Fa Sat" fx:id="fa_sat_g" />
-                <TableColumn prefWidth="75.0" text="Fa Mono" fx:id="fa_mono_g" />
-                <TableColumn prefWidth="75.0" text="Fa Poly" fx:id="fa_poly_g" />
-                <TableColumn prefWidth="75.0" text="Cholesterol" fx:id="cholesterol_mg" />
-                <TableColumn prefWidth="75.0" text="Weight1" fx:id="gmwt1" />
-                <TableColumn prefWidth="75.0" text="Weight1 Desc" fx:id="gmwt1_desc" />
-                <TableColumn prefWidth="75.0" text="Weight2" fx:id="gmwt2" />
-                <TableColumn prefWidth="75.0" text="Weight2 Desc" fx:id="gmwt2_desc" />
-                <TableColumn prefWidth="75.0" text="Refuse %" fx:id="refuse_pct" />
               </columns>
             </TableView>
             <HBox id="HBox" alignment="CENTER" prefWidth="414.0" spacing="10.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="18.0">
