@@ -16,7 +16,7 @@ public class Food implements Serializable {
     
     private String ndb_no, shrt_desc;
     private double energ_kcal, protein_g, lipid_tot_g;
-    private double carbohydrt_g, fiber_td_g, calcium_mg, iron_mg;
+    private double carbohydrt_g, fiber_td_g, iron_mg;
     
     public Food() {}
 
@@ -74,14 +74,6 @@ public class Food implements Serializable {
 
     public void setFiber_td_g(double fiber_td_g) {
         this.fiber_td_g = fiber_td_g;
-    }
-
-    public double getCalcium_mg() {
-        return calcium_mg;
-    }
-
-    public void setCalcium_mg(double calcium_mg) {
-        this.calcium_mg = calcium_mg;
     }
 
     public double getIron_mg() {

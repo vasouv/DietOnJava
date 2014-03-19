@@ -33,7 +33,6 @@
                                     <TableColumn prefWidth="75.0" text="Lipids" fx:id="lipid_tot_gMBr" />
                                     <TableColumn prefWidth="75.0" text="Carbs" fx:id="carbohydrt_gMBr" />
                                     <TableColumn prefWidth="75.0" text="Fiber" fx:id="fiber_td_gMBr" />
-                                    <TableColumn prefWidth="75.0" text="Calcium" fx:id="calcium_mgMBr" />
                                     <TableColumn prefWidth="75.0" text="Iron" fx:id="iron_mgMBr" />
                                   </columns>
                                 </TableView>
@@ -46,7 +45,6 @@
                                     <TableColumn prefWidth="75.0" text="Lipids" fx:id="lipid_tot_gMBr2" />
                                     <TableColumn prefWidth="75.0" text="Carbs" fx:id="carbohydrt_gMBr2" />
                                     <TableColumn prefWidth="75.0" text="Fiber" fx:id="fiber_td_gMBr2" />
-                                    <TableColumn prefWidth="75.0" text="Calcium" fx:id="calcium_mgMBr2" />
                                     <TableColumn prefWidth="75.0" text="Iron" fx:id="iron_mgMBr2" />
                                   </columns>
                                 </TableView>
@@ -59,7 +57,6 @@
                                     <TableColumn prefWidth="75.0" text="Lipids" fx:id="lipid_tot_gML" />
                                     <TableColumn prefWidth="75.0" text="Carbs" fx:id="carbohydrt_gML" />
                                     <TableColumn prefWidth="75.0" text="Fiber" fx:id="fiber_td_gML" />
-                                    <TableColumn prefWidth="75.0" text="Calcium" fx:id="calcium_mgML" />
                                     <TableColumn prefWidth="75.0" text="Iron" fx:id="iron_mgML" />
                                   </columns>
                                 </TableView>
@@ -72,7 +69,6 @@
                                     <TableColumn prefWidth="75.0" text="Lipids" fx:id="lipid_tot_gML2" />
                                     <TableColumn prefWidth="75.0" text="Carbs" fx:id="carbohydrt_gML2" />
                                     <TableColumn prefWidth="75.0" text="Fiber" fx:id="fiber_td_gML2" />
-                                    <TableColumn prefWidth="75.0" text="Calcium" fx:id="calcium_mgML2" />
                                     <TableColumn prefWidth="75.0" text="Iron" fx:id="iron_mgML2" />
                                   </columns>
                                 </TableView>
@@ -85,7 +81,6 @@
                                     <TableColumn prefWidth="75.0" text="Lipids" fx:id="lipid_tot_gMD" />
                                     <TableColumn prefWidth="75.0" text="Carbs" fx:id="carbohydrt_gMD" />
                                     <TableColumn prefWidth="75.0" text="Fiber" fx:id="fiber_td_gMD" />
-                                    <TableColumn prefWidth="75.0" text="Calcium" fx:id="calcium_mgMD" />
                                     <TableColumn prefWidth="75.0" text="Iron" fx:id="iron_mgMD" />
                                   </columns>
                                 </TableView>
@@ -98,7 +93,6 @@
                                     <TableColumn prefWidth="75.0" text="Lipids" fx:id="lipid_tot_gMT" />
                                     <TableColumn prefWidth="75.0" text="Carbs" fx:id="carbohydrt_gMT" />
                                     <TableColumn prefWidth="75.0" text="Fiber" fx:id="fiber_td_gMT" />
-                                    <TableColumn prefWidth="75.0" text="Calcium" fx:id="calcium_mgMT" />
                                     <TableColumn prefWidth="75.0" text="Iron" fx:id="iron_mgMT" />
                                   </columns>
                                 </TableView>
@@ -197,7 +191,6 @@
                 <TableColumn prefWidth="75.0" text="Lipids" fx:id="lipid_tot_g" />
                 <TableColumn prefWidth="75.0" text="Carbs" fx:id="carbohydrt_g" />
                 <TableColumn prefWidth="75.0" text="Fiber" fx:id="fiber_td_g" />
-                <TableColumn prefWidth="75.0" text="Calcium" fx:id="calcium_mg" />
                 <TableColumn prefWidth="75.0" text="Iron" fx:id="iron_mg" />
               </columns>
             </TableView>

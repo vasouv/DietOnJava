@@ -70,8 +70,7 @@ public class FoodSQL {
                 foo.setLipid_tot_g(rs.getDouble(5));
                 foo.setCarbohydrt_g(rs.getDouble(6));
                 foo.setFiber_td_g(rs.getDouble(7));
-                foo.setCalcium_mg(rs.getDouble(8));
-                foo.setIron_mg(rs.getDouble(9));
+                foo.setIron_mg(rs.getDouble(8));
                 
                 search.add(foo);
             }
@@ -104,8 +103,7 @@ public class FoodSQL {
                 foo.setLipid_tot_g(rs.getDouble(5));
                 foo.setCarbohydrt_g(rs.getDouble(6));
                 foo.setFiber_td_g(rs.getDouble(7));
-                foo.setCalcium_mg(rs.getDouble(8));
-                foo.setIron_mg(rs.getDouble(9));
+                foo.setIron_mg(rs.getDouble(8));
 
                 tempList.add(foo);
             }

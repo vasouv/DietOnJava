@@ -47,11 +47,21 @@ public class MainGUIController implements Initializable {
     @FXML
     private TableColumn<Food,Double> energ_kcal, protein_g, lipid_tot_g;
     @FXML
-    private TableColumn<Food,Double> carbohydrt_g, fiber_td_g, calcium_mg, iron_mg;
+    private TableColumn<Food,Double> carbohydrt_g, fiber_td_g, iron_mg;
+    
+    /**
+     * TableColumns for Monday Breakfast
+     */
+    @FXML
+    private TableColumn<Food,String> shrt_descMBr, ndb_noMBr;
+    @FXML
+    private TableColumn<Food,Double> energ_kcalMBr, protein_gMBr, lipid_tot_gMBr;
+    @FXML
+    private TableColumn<Food,Double> carbohydrt_gMBr, fiber_td_gMBr, iron_mgMBr;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        createDBCells();
+        createTableViewCells();
         
         list = fsql.listFoods();
         foodDB.setItems(list);
@@ -62,13 +72,19 @@ public class MainGUIController implements Initializable {
     @FXML
     private void searchTerm(KeyEvent event) {
         if(event.getCode() == KeyCode.ENTER) {
-            createDBCells();
+            createTableViewCells();
             list = fsql.searchDB(searchBox.getText());
             foodDB.setItems(list);
         }
     }
     
-    private void createDBCells() {
+    private void createTableViewCells() {
+
+        createMainDBCells();
+        
+    }    
+
+    private void createMainDBCells() {
         /**
          * Main DB cells
          */
@@ -79,9 +95,21 @@ public class MainGUIController implements Initializable {
         lipid_tot_g.setCellValueFactory(new PropertyValueFactory<Food,Double>(NutrientNames.LIPIDS));
         carbohydrt_g.setCellValueFactory(new PropertyValueFactory<Food,Double>(NutrientNames.CARBS));
         fiber_td_g.setCellValueFactory(new PropertyValueFactory<Food,Double>(NutrientNames.FIBER));
-        calcium_mg.setCellValueFactory(new PropertyValueFactory<Food,Double>(NutrientNames.CALCIUM));
         iron_mg.setCellValueFactory(new PropertyValueFactory<Food,Double>(NutrientNames.IRON));
-        
-    }    
+    }
+    
+    private void createMondayBreakfastCells() {
+        /**
+         * Creates Monday breakfast cells
+         */
+        ndb_noMBr.setCellValueFactory(new PropertyValueFactory<Food,String>(NutrientNames.NDB_NO));
+        shrt_descMBr.setCellValueFactory(new PropertyValueFactory<Food,String>(NutrientNames.SHRT_DESC));
+        energ_kcalMBr.setCellValueFactory(new PropertyValueFactory<Food,Double>(NutrientNames.ENERGY));
+        protein_gMBr.setCellValueFactory(new PropertyValueFactory<Food,Double>(NutrientNames.PROTEIN));
+        lipid_tot_gMBr.setCellValueFactory(new PropertyValueFactory<Food,Double>(NutrientNames.LIPIDS));
+        carbohydrt_gMBr.setCellValueFactory(new PropertyValueFactory<Food,Double>(NutrientNames.CARBS));
+        fiber_td_gMBr.setCellValueFactory(new PropertyValueFactory<Food,Double>(NutrientNames.FIBER));
+        iron_mgMBr.setCellValueFactory(new PropertyValueFactory<Food,Double>(NutrientNames.IRON));
+    }
     
 }
