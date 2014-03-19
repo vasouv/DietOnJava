@@ -28,8 +28,14 @@ import javafx.scene.input.KeyEvent;
  */
 public class MainGUIController implements Initializable {
     
+    /**
+     * It performs all SQL queries to the DB
+     */
     FoodSQL fsql = new FoodSQL();
     
+    /**
+     * It holds all food elements that populate the DB TableView
+     */
     @FXML
     private ObservableList<Food> list = FXCollections.observableArrayList();
      
@@ -42,6 +48,9 @@ public class MainGUIController implements Initializable {
     @FXML
     private TextField searchBox;
     
+    /**
+     * TableColumns for the DB
+     */
     @FXML
     private TableColumn<Food,String> shrt_desc, ndb_no;
     @FXML
@@ -81,7 +90,6 @@ public class MainGUIController implements Initializable {
     private void createTableViewCells() {
 
         createMainDBCells();
-        
     }    
 
     private void createMainDBCells() {

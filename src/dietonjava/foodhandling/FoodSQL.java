@@ -41,6 +41,11 @@ public class FoodSQL {
         }
     }
 
+    /**
+     * It searches the database for the specific term
+     * @param term String - if null shows entire DB
+     * @return ObservableList that contains the query's result
+     */
     public ObservableList<Food> searchDB(String term) {
 
         establishConnection();
@@ -61,16 +66,16 @@ public class FoodSQL {
             rs = statement.executeQuery(sqlQuery);
 
             while (rs.next()) {
-                Food foo = new Food();
-
-                foo.setNdb_no(rs.getString(1));
-                foo.setShrt_desc(rs.getString(2));
-                foo.setEnerg_kcal(rs.getDouble(3));
-                foo.setProtein_g(rs.getDouble(4));
-                foo.setLipid_tot_g(rs.getDouble(5));
-                foo.setCarbohydrt_g(rs.getDouble(6));
-                foo.setFiber_td_g(rs.getDouble(7));
-                foo.setIron_mg(rs.getDouble(8));
+                String ndb = rs.getString(1);
+                String desc = rs.getString(2);
+                double energy = rs.getDouble(3);
+                double protein = rs.getDouble(4);
+                double lipids = rs.getDouble(5);
+                double carbs = rs.getDouble(6);
+                double fibers = rs.getDouble(7);
+                double iron = rs.getDouble(8);
+                
+                Food foo = new Food(ndb, desc, energy, protein, lipids, carbs, fibers, iron);
                 
                 search.add(foo);
             }
@@ -94,16 +99,16 @@ public class FoodSQL {
             ResultSet rs = statement.executeQuery("select * from foods");
 
             while (rs.next()) {
-                Food foo = new Food();
-
-                foo.setNdb_no(rs.getString(1));
-                foo.setShrt_desc(rs.getString(2));
-                foo.setEnerg_kcal(rs.getDouble(3));
-                foo.setProtein_g(rs.getDouble(4));
-                foo.setLipid_tot_g(rs.getDouble(5));
-                foo.setCarbohydrt_g(rs.getDouble(6));
-                foo.setFiber_td_g(rs.getDouble(7));
-                foo.setIron_mg(rs.getDouble(8));
+                String ndb = rs.getString(1);
+                String desc = rs.getString(2);
+                double energy = rs.getDouble(3);
+                double protein = rs.getDouble(4);
+                double lipids = rs.getDouble(5);
+                double carbs = rs.getDouble(6);
+                double fibers = rs.getDouble(7);
+                double iron = rs.getDouble(8);
+                
+                Food foo = new Food(ndb, desc, energy, protein, lipids, carbs, fibers, iron);
 
                 tempList.add(foo);
             }

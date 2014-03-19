@@ -20,6 +20,26 @@ public class Food implements Serializable {
     
     public Food() {}
 
+    public Food(String ndb_no, String shrt_desc, double energ_kcal, double protein_g, 
+            double lipid_tot_g, double carbohydrt_g, double fiber_td_g, double iron_mg) {
+        this.ndb_no = ndb_no;
+        this.shrt_desc = shrt_desc;
+        this.energ_kcal = energ_kcal;
+        this.protein_g = protein_g;
+        this.lipid_tot_g = lipid_tot_g;
+        this.carbohydrt_g = carbohydrt_g;
+        this.fiber_td_g = fiber_td_g;
+        this.iron_mg = iron_mg;
+    }
+    
+    
+    
+    public Food(Food toCopy) {
+        this(toCopy.getNdb_no(), toCopy.getShrt_desc(), toCopy.getEnerg_kcal(), 
+                toCopy.getProtein_g(), toCopy.getLipid_tot_g(), 
+                toCopy.getCarbohydrt_g(), toCopy.getFiber_td_g(), toCopy.getIron_mg());
+    }
+
     public String getNdb_no() {
         return ndb_no;
     }
