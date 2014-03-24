@@ -13,6 +13,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
@@ -21,6 +22,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
 
 /**
  *
@@ -49,6 +51,21 @@ public class MainGUIController implements Initializable {
     private TextField searchBox;
     
     /**
+     * Temp food that is drag'n'dropped from the DB
+     */
+    Food toCopyFood;
+    
+    /**
+     * Temp lists that holds the food to be added to the specified day TableView
+     */
+    ObservableList<Food> monBreakfastList = FXCollections.observableArrayList();
+    ObservableList<Food> monBreakfast2List = FXCollections.observableArrayList();
+    ObservableList<Food> monLunchList = FXCollections.observableArrayList();
+    ObservableList<Food> monLunch2List = FXCollections.observableArrayList();
+    ObservableList<Food> monDinnerList = FXCollections.observableArrayList();
+    ObservableList<Food> monTotalList = FXCollections.observableArrayList();
+    
+    /**
      * TableColumns for the DB
      */
     @FXML
@@ -74,10 +91,11 @@ public class MainGUIController implements Initializable {
         
         list = fsql.listFoods();
         foodDB.setItems(list);
-        
-        //monBreakfast.getColumns().addAll(foodDBCopy.getColumns());
     }
     
+    /**
+     * Searches the database for the search term by pressing ENTER
+     */
     @FXML
     private void searchTerm(KeyEvent event) {
         if(event.getCode() == KeyCode.ENTER) {
@@ -87,9 +105,40 @@ public class MainGUIController implements Initializable {
         }
     }
     
+    @FXML
+    private void copyFood(MouseEvent event) {
+        
+        foodDB.setOnMouseClicked(new EventHandler<MouseEvent>() {
+
+            @Override
+            public void handle(MouseEvent event) {
+                toCopyFood = new Food(foodDB.getSelectionModel().getSelectedItem());
+            }
+        });
+    }
+    
+    @FXML
+    private void addRemoveFood(MouseEvent event) {
+        
+        monBreakfast.setOnMouseClicked(new EventHandler<MouseEvent>() {
+
+            @Override
+            public void handle(MouseEvent event) {
+                if(event.getClickCount() == 2) {
+                    monBreakfastList.add(toCopyFood);
+                    monBreakfast.setItems(monBreakfastList);
+                }
+                if(event.isControlDown() && event.getClickCount() == 1) {
+                    monBreakfast.getItems().remove(monBreakfast.getSelectionModel().getSelectedItem());
+                }
+            }
+        });
+    }
+    
     private void createTableViewCells() {
 
         createMainDBCells();
+        createMondayBreakfastCells();
     }    
 
     private void createMainDBCells() {

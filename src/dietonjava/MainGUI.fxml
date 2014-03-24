@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.lang.*?>
-<?import java.util.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.paint.*?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="dietonjava.MainGUIController">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dietonjava.MainGUIController">
   <children>
     <SplitPane dividerPositions="0.5567514677103719" focusTraversable="true" prefHeight="768.0" prefWidth="1024.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
       <items>
@@ -24,76 +22,76 @@
                           <content>
                             <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="1207.0" prefWidth="566.0">
                               <children>
-                                <TableView fx:id="monBreakfast" prefHeight="227.0" prefWidth="566.0" AnchorPane.bottomAnchor="981.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="-1.0">
+                                <TableView fx:id="monBreakfast" onMouseClicked="#addRemoveFood" prefHeight="227.0" prefWidth="566.0" AnchorPane.bottomAnchor="981.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="-1.0">
                                   <columns>
-                                    <TableColumn prefWidth="75.0" text="NDB" fx:id="ndb_noMBr" />
-                                    <TableColumn prefWidth="75.0" text="Description" fx:id="shrt_descMBr" />
-                                    <TableColumn prefWidth="75.0" text="Energy" fx:id="energ_kcalMBr" />
-                                    <TableColumn prefWidth="75.0" text="Protein" fx:id="protein_gMBr" />
-                                    <TableColumn prefWidth="75.0" text="Lipids" fx:id="lipid_tot_gMBr" />
-                                    <TableColumn prefWidth="75.0" text="Carbs" fx:id="carbohydrt_gMBr" />
-                                    <TableColumn prefWidth="75.0" text="Fiber" fx:id="fiber_td_gMBr" />
-                                    <TableColumn prefWidth="75.0" text="Iron" fx:id="iron_mgMBr" />
+                                    <TableColumn fx:id="ndb_noMBr" prefWidth="75.0" text="NDB" />
+                                    <TableColumn fx:id="shrt_descMBr" prefWidth="75.0" text="Description" />
+                                    <TableColumn fx:id="energ_kcalMBr" prefWidth="75.0" text="Energy" />
+                                    <TableColumn fx:id="protein_gMBr" prefWidth="75.0" text="Protein" />
+                                    <TableColumn fx:id="lipid_tot_gMBr" prefWidth="75.0" text="Lipids" />
+                                    <TableColumn fx:id="carbohydrt_gMBr" prefWidth="75.0" text="Carbs" />
+                                    <TableColumn fx:id="fiber_td_gMBr" prefWidth="75.0" text="Fiber" />
+                                    <TableColumn fx:id="iron_mgMBr" prefWidth="75.0" text="Iron" />
                                   </columns>
                                 </TableView>
                                 <TableView fx:id="monBreakfast2" prefHeight="109.0" prefWidth="551.0" AnchorPane.bottomAnchor="875.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="223.0">
                                   <columns>
-                                    <TableColumn prefWidth="75.0" text="NDB" fx:id="ndb_noMBr2" />
-                                    <TableColumn prefWidth="75.0" text="Description" fx:id="shrt_descMBr2" />
-                                    <TableColumn prefWidth="75.0" text="Energy" fx:id="energ_kcalMBr2" />
-                                    <TableColumn prefWidth="75.0" text="Protein" fx:id="protein_gMBr2" />
-                                    <TableColumn prefWidth="75.0" text="Lipids" fx:id="lipid_tot_gMBr2" />
-                                    <TableColumn prefWidth="75.0" text="Carbs" fx:id="carbohydrt_gMBr2" />
-                                    <TableColumn prefWidth="75.0" text="Fiber" fx:id="fiber_td_gMBr2" />
-                                    <TableColumn prefWidth="75.0" text="Iron" fx:id="iron_mgMBr2" />
+                                    <TableColumn fx:id="ndb_noMBr2" prefWidth="75.0" text="NDB" />
+                                    <TableColumn fx:id="shrt_descMBr2" prefWidth="75.0" text="Description" />
+                                    <TableColumn fx:id="energ_kcalMBr2" prefWidth="75.0" text="Energy" />
+                                    <TableColumn fx:id="protein_gMBr2" prefWidth="75.0" text="Protein" />
+                                    <TableColumn fx:id="lipid_tot_gMBr2" prefWidth="75.0" text="Lipids" />
+                                    <TableColumn fx:id="carbohydrt_gMBr2" prefWidth="75.0" text="Carbs" />
+                                    <TableColumn fx:id="fiber_td_gMBr2" prefWidth="75.0" text="Fiber" />
+                                    <TableColumn fx:id="iron_mgMBr2" prefWidth="75.0" text="Iron" />
                                   </columns>
                                 </TableView>
                                 <TableView fx:id="monLunch" prefHeight="200.0" prefWidth="551.0" AnchorPane.bottomAnchor="675.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="332.0">
                                   <columns>
-                                    <TableColumn prefWidth="75.0" text="NDB" fx:id="ndb_noML" />
-                                    <TableColumn prefWidth="75.0" text="Description" fx:id="shrt_descML" />
-                                    <TableColumn prefWidth="75.0" text="Energy" fx:id="energ_kcalML" />
-                                    <TableColumn prefWidth="75.0" text="Protein" fx:id="protein_gML" />
-                                    <TableColumn prefWidth="75.0" text="Lipids" fx:id="lipid_tot_gML" />
-                                    <TableColumn prefWidth="75.0" text="Carbs" fx:id="carbohydrt_gML" />
-                                    <TableColumn prefWidth="75.0" text="Fiber" fx:id="fiber_td_gML" />
-                                    <TableColumn prefWidth="75.0" text="Iron" fx:id="iron_mgML" />
+                                    <TableColumn fx:id="ndb_noML" prefWidth="75.0" text="NDB" />
+                                    <TableColumn fx:id="shrt_descML" prefWidth="75.0" text="Description" />
+                                    <TableColumn fx:id="energ_kcalML" prefWidth="75.0" text="Energy" />
+                                    <TableColumn fx:id="protein_gML" prefWidth="75.0" text="Protein" />
+                                    <TableColumn fx:id="lipid_tot_gML" prefWidth="75.0" text="Lipids" />
+                                    <TableColumn fx:id="carbohydrt_gML" prefWidth="75.0" text="Carbs" />
+                                    <TableColumn fx:id="fiber_td_gML" prefWidth="75.0" text="Fiber" />
+                                    <TableColumn fx:id="iron_mgML" prefWidth="75.0" text="Iron" />
                                   </columns>
                                 </TableView>
                                 <TableView fx:id="monLunch2" prefHeight="200.0" prefWidth="551.0" AnchorPane.bottomAnchor="370.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="637.0">
                                   <columns>
-                                    <TableColumn prefWidth="75.0" text="NDB" fx:id="ndb_noML2" />
-                                    <TableColumn prefWidth="75.0" text="Description" fx:id="shrt_descML2" />
-                                    <TableColumn prefWidth="75.0" text="Energy" fx:id="energ_kcalML2" />
-                                    <TableColumn prefWidth="75.0" text="Protein" fx:id="protein_gML2" />
-                                    <TableColumn prefWidth="75.0" text="Lipids" fx:id="lipid_tot_gML2" />
-                                    <TableColumn prefWidth="75.0" text="Carbs" fx:id="carbohydrt_gML2" />
-                                    <TableColumn prefWidth="75.0" text="Fiber" fx:id="fiber_td_gML2" />
-                                    <TableColumn prefWidth="75.0" text="Iron" fx:id="iron_mgML2" />
+                                    <TableColumn fx:id="ndb_noML2" prefWidth="75.0" text="NDB" />
+                                    <TableColumn fx:id="shrt_descML2" prefWidth="75.0" text="Description" />
+                                    <TableColumn fx:id="energ_kcalML2" prefWidth="75.0" text="Energy" />
+                                    <TableColumn fx:id="protein_gML2" prefWidth="75.0" text="Protein" />
+                                    <TableColumn fx:id="lipid_tot_gML2" prefWidth="75.0" text="Lipids" />
+                                    <TableColumn fx:id="carbohydrt_gML2" prefWidth="75.0" text="Carbs" />
+                                    <TableColumn fx:id="fiber_td_gML2" prefWidth="75.0" text="Fiber" />
+                                    <TableColumn fx:id="iron_mgML2" prefWidth="75.0" text="Iron" />
                                   </columns>
                                 </TableView>
                                 <TableView fx:id="monDinner" prefHeight="105.0" prefWidth="551.0" AnchorPane.bottomAnchor="570.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="532.0">
                                   <columns>
-                                    <TableColumn prefWidth="75.0" text="NDB" fx:id="ndb_noMD" />
-                                    <TableColumn prefWidth="75.0" text="Description" fx:id="shrt_descMD" />
-                                    <TableColumn prefWidth="75.0" text="Energy" fx:id="energ_kcalMD" />
-                                    <TableColumn prefWidth="75.0" text="Protein" fx:id="protein_gMD" />
-                                    <TableColumn prefWidth="75.0" text="Lipids" fx:id="lipid_tot_gMD" />
-                                    <TableColumn prefWidth="75.0" text="Carbs" fx:id="carbohydrt_gMD" />
-                                    <TableColumn prefWidth="75.0" text="Fiber" fx:id="fiber_td_gMD" />
-                                    <TableColumn prefWidth="75.0" text="Iron" fx:id="iron_mgMD" />
+                                    <TableColumn fx:id="ndb_noMD" prefWidth="75.0" text="NDB" />
+                                    <TableColumn fx:id="shrt_descMD" prefWidth="75.0" text="Description" />
+                                    <TableColumn fx:id="energ_kcalMD" prefWidth="75.0" text="Energy" />
+                                    <TableColumn fx:id="protein_gMD" prefWidth="75.0" text="Protein" />
+                                    <TableColumn fx:id="lipid_tot_gMD" prefWidth="75.0" text="Lipids" />
+                                    <TableColumn fx:id="carbohydrt_gMD" prefWidth="75.0" text="Carbs" />
+                                    <TableColumn fx:id="fiber_td_gMD" prefWidth="75.0" text="Fiber" />
+                                    <TableColumn fx:id="iron_mgMD" prefWidth="75.0" text="Iron" />
                                   </columns>
                                 </TableView>
                                 <TableView fx:id="monTotal" prefHeight="51.0" prefWidth="566.0" AnchorPane.bottomAnchor="319.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="837.0">
                                   <columns>
-                                    <TableColumn prefWidth="75.0" text="NDB" fx:id="ndb_noMT" />
-                                    <TableColumn prefWidth="75.0" text="Description" fx:id="shrt_descMT" />
-                                    <TableColumn prefWidth="75.0" text="Energy" fx:id="energ_kcalMT" />
-                                    <TableColumn prefWidth="75.0" text="Protein" fx:id="protein_gMT" />
-                                    <TableColumn prefWidth="75.0" text="Lipids" fx:id="lipid_tot_gMT" />
-                                    <TableColumn prefWidth="75.0" text="Carbs" fx:id="carbohydrt_gMT" />
-                                    <TableColumn prefWidth="75.0" text="Fiber" fx:id="fiber_td_gMT" />
-                                    <TableColumn prefWidth="75.0" text="Iron" fx:id="iron_mgMT" />
+                                    <TableColumn fx:id="ndb_noMT" prefWidth="75.0" text="NDB" />
+                                    <TableColumn fx:id="shrt_descMT" prefWidth="75.0" text="Description" />
+                                    <TableColumn fx:id="energ_kcalMT" prefWidth="75.0" text="Energy" />
+                                    <TableColumn fx:id="protein_gMT" prefWidth="75.0" text="Protein" />
+                                    <TableColumn fx:id="lipid_tot_gMT" prefWidth="75.0" text="Lipids" />
+                                    <TableColumn fx:id="carbohydrt_gMT" prefWidth="75.0" text="Carbs" />
+                                    <TableColumn fx:id="fiber_td_gMT" prefWidth="75.0" text="Fiber" />
+                                    <TableColumn fx:id="iron_mgMT" prefWidth="75.0" text="Iron" />
                                   </columns>
                                 </TableView>
                               </children>
@@ -182,16 +180,16 @@
                 </Tab>
               </tabs>
             </TabPane>
-            <TableView fx:id="foodDB" prefHeight="475.0" prefWidth="414.0" AnchorPane.bottomAnchor="54.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="237.0">
+            <TableView fx:id="foodDB" onMouseClicked="#copyFood" prefHeight="475.0" prefWidth="414.0" AnchorPane.bottomAnchor="54.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="237.0">
               <columns>
-                <TableColumn prefWidth="75.0" text="NDB" fx:id="ndb_no" />
-                <TableColumn prefWidth="75.0" text="Description" fx:id="shrt_desc" />
-                <TableColumn prefWidth="75.0" text="Energy" fx:id="energ_kcal" />
-                <TableColumn prefWidth="75.0" text="Protein" fx:id="protein_g" />
-                <TableColumn prefWidth="75.0" text="Lipids" fx:id="lipid_tot_g" />
-                <TableColumn prefWidth="75.0" text="Carbs" fx:id="carbohydrt_g" />
-                <TableColumn prefWidth="75.0" text="Fiber" fx:id="fiber_td_g" />
-                <TableColumn prefWidth="75.0" text="Iron" fx:id="iron_mg" />
+                <TableColumn fx:id="ndb_no" prefWidth="75.0" text="NDB" />
+                <TableColumn fx:id="shrt_desc" prefWidth="75.0" text="Description" />
+                <TableColumn fx:id="energ_kcal" prefWidth="75.0" text="Energy" />
+                <TableColumn fx:id="protein_g" prefWidth="75.0" text="Protein" />
+                <TableColumn fx:id="lipid_tot_g" prefWidth="75.0" text="Lipids" />
+                <TableColumn fx:id="carbohydrt_g" prefWidth="75.0" text="Carbs" />
+                <TableColumn fx:id="fiber_td_g" prefWidth="75.0" text="Fiber" />
+                <TableColumn fx:id="iron_mg" prefWidth="75.0" text="Iron" />
               </columns>
             </TableView>
             <HBox id="HBox" alignment="CENTER" prefWidth="414.0" spacing="10.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="18.0">
@@ -199,7 +197,7 @@
                 <Button fx:id="add" mnemonicParsing="false" text="Add" />
                 <Button mnemonicParsing="false" text="Edit" />
                 <Button mnemonicParsing="false" text="Delete" />
-                <TextField fx:id="searchBox" prefWidth="123.0" promptText="search" onKeyPressed="#searchTerm" >
+                <TextField fx:id="searchBox" onKeyPressed="#searchTerm" prefWidth="123.0" promptText="search">
                   <HBox.margin>
                     <Insets left="15.0" />
                   </HBox.margin>
