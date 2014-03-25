@@ -5,12 +5,13 @@
  */
 package dietonjava.foodhandling;
 
+import static java.lang.Class.forName;
 import java.sql.Connection;
-import java.sql.DriverManager;
+import static java.sql.DriverManager.getConnection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import javafx.collections.FXCollections;
+import static javafx.collections.FXCollections.observableArrayList;
 import javafx.collections.ObservableList;
 
 /**
@@ -24,8 +25,8 @@ public class FoodSQL {
 
     private void establishConnection() {
         try {
-            Class.forName("org.sqlite.JDBC");
-            connection = DriverManager.getConnection("jdbc:sqlite:foods_abr.sqlite");
+            forName("org.sqlite.JDBC");
+            connection = getConnection("jdbc:sqlite:foods_abr.sqlite");
             statement = connection.createStatement();
         } catch (ClassNotFoundException | SQLException e) {
             System.err.println("Couldn't connect to DB");
@@ -50,7 +51,7 @@ public class FoodSQL {
 
         establishConnection();
         
-        ObservableList<Food> search = FXCollections.observableArrayList();
+        ObservableList<Food> search = observableArrayList();
 
         ResultSet rs = null;
         
@@ -94,7 +95,7 @@ public class FoodSQL {
         try {
             establishConnection();
 
-            ObservableList<Food> tempList = FXCollections.observableArrayList();
+            ObservableList<Food> tempList = observableArrayList();
 
             ResultSet rs = statement.executeQuery("select * from foods");
 

@@ -7,7 +7,7 @@
 package dietonjava;
 
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
+import static javafx.fxml.FXMLLoader.load;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -20,7 +20,7 @@ public class DietOnJava extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("MainGUI.fxml"));
+        Parent root = load(getClass().getResource("MainGUI.fxml"));
         
         Scene scene = new Scene(root);
         
