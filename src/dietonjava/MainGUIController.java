@@ -43,16 +43,25 @@ public class MainGUIController implements Initializable {
     private TableView<Food> foodDB;
 
     @FXML
-    private TableView<Food> monBreakfast, monBreakfast2, monLunch, monLunch2, monDinner, monTotal;
+    private TableView<Food> monBreakfast, monLunch, monDinner;
     
     @FXML
-    private TableView<Food> tueBreakfast, tueBreakfast2, tueLunch, tueLunch2, tueDinner, tueTotal;
+    private TableView<Food> tueBreakfast, tueLunch, tueDinner;
     
     @FXML
-    private TableView<Food> wedBreakfast, wedBreakfast2, wedLunch, wedLunch2, wedDinner, wedTotal;
+    private TableView<Food> wedBreakfast, wedLunch, wedDinner;
     
     @FXML
-    private TableView<Food> thBreakfast, thBreakfast2, thLunch, thLunch2, thDinner, thTotal;
+    private TableView<Food> thBreakfast, thLunch, thDinner;
+    
+    @FXML
+    private TableView<Food> fBreakfast, fLunch, fDinner;
+    
+    @FXML
+    private TableView<Food> sBreakfast, sLunch, sDinner;
+    
+    @FXML
+    private TableView<Food> suBreakfast, suLunch, suDinner;
 
     @FXML
     private TextField searchBox;
@@ -66,32 +75,32 @@ public class MainGUIController implements Initializable {
      * Temp lists that holds the food to be added to the specified day TableView
      */
     ObservableList<Food> monBreakfastList = observableArrayList();
-    ObservableList<Food> monBreakfast2List = observableArrayList();
     ObservableList<Food> monLunchList = observableArrayList();
-    ObservableList<Food> monLunch2List = observableArrayList();
     ObservableList<Food> monDinnerList = observableArrayList();
-    ObservableList<Food> monTotalList = observableArrayList();
     
     ObservableList<Food> tueBreakfastList = observableArrayList();
-    ObservableList<Food> tueBreakfast2List = observableArrayList();
     ObservableList<Food> tueLunchList = observableArrayList();
-    ObservableList<Food> tueLunch2List = observableArrayList();
     ObservableList<Food> tueDinnerList = observableArrayList();
-    ObservableList<Food> tueTotalList = observableArrayList();
     
     ObservableList<Food> wedBreakfastList = observableArrayList();
-    ObservableList<Food> wedBreakfast2List = observableArrayList();
     ObservableList<Food> wedLunchList = observableArrayList();
-    ObservableList<Food> wedLunch2List = observableArrayList();
     ObservableList<Food> wedDinnerList = observableArrayList();
-    ObservableList<Food> wedTotalList = observableArrayList();
     
     ObservableList<Food> thBreakfastList = observableArrayList();
-    ObservableList<Food> thBreakfast2List = observableArrayList();
     ObservableList<Food> thLunchList = observableArrayList();
-    ObservableList<Food> thLunch2List = observableArrayList();
     ObservableList<Food> thDinnerList = observableArrayList();
-    ObservableList<Food> thTotalList = observableArrayList();
+    
+    ObservableList<Food> fBreakfastList = observableArrayList();
+    ObservableList<Food> fLunchList = observableArrayList();
+    ObservableList<Food> fDinnerList = observableArrayList();
+    
+    ObservableList<Food> sBreakfastList = observableArrayList();
+    ObservableList<Food> sLunchList = observableArrayList();
+    ObservableList<Food> sDinnerList = observableArrayList();
+    
+    ObservableList<Food> suBreakfastList = observableArrayList();
+    ObservableList<Food> suLunchList = observableArrayList();
+    ObservableList<Food> suDinnerList = observableArrayList();
 
     /**
      * TableColumns for the DB
@@ -114,16 +123,6 @@ public class MainGUIController implements Initializable {
     private TableColumn<Food, Double> carbohydrt_gMBr, fiber_td_gMBr, iron_mgMBr;
     
     /**
-     * TableColums for Monday Breakfast2
-     */
-    @FXML
-    private TableColumn<Food, String> shrt_descMBr2, ndb_noMBr2;
-    @FXML
-    private TableColumn<Food, Double> energ_kcalMBr2, protein_gMBr2, lipid_tot_gMBr2;
-    @FXML
-    private TableColumn<Food, Double> carbohydrt_gMBr2, fiber_td_gMBr2, iron_mgMBr2;
-    
-    /**
      * TableColums for Monday Lunch
      */
     @FXML
@@ -132,16 +131,6 @@ public class MainGUIController implements Initializable {
     private TableColumn<Food, Double> energ_kcalML, protein_gML, lipid_tot_gML;
     @FXML
     private TableColumn<Food, Double> carbohydrt_gML, fiber_td_gML, iron_mgML;
-    
-    /**
-     * TableColums for Monday Lunch 2
-     */
-    @FXML
-    private TableColumn<Food, String> shrt_descML2, ndb_noML2;
-    @FXML
-    private TableColumn<Food, Double> energ_kcalML2, protein_gML2, lipid_tot_gML2;
-    @FXML
-    private TableColumn<Food, Double> carbohydrt_gML2, fiber_td_gML2, iron_mgML2;
     
     /**
      * TableColumns for Monday Dinner
@@ -164,16 +153,6 @@ public class MainGUIController implements Initializable {
     private TableColumn<Food, Double> carbohydrt_gTBr, fiber_td_gTBr, iron_mgTBr;
     
     /**
-     * TableColums for Tuesday Breakfast 2
-     */
-    @FXML
-    private TableColumn<Food, String> shrt_descTBr2, ndb_noTBr2;
-    @FXML
-    private TableColumn<Food, Double> energ_kcalTBr2, protein_gTBr2, lipid_tot_gTBr2;
-    @FXML
-    private TableColumn<Food, Double> carbohydrt_gTBr2, fiber_td_gTBr2, iron_mgTBr2;
-    
-    /**
      * TableColums for Tuesday Lunch
      */
     @FXML
@@ -182,16 +161,6 @@ public class MainGUIController implements Initializable {
     private TableColumn<Food, Double> energ_kcalTL, protein_gTL, lipid_tot_gTL;
     @FXML
     private TableColumn<Food, Double> carbohydrt_gTL, fiber_td_gTL, iron_mgTL;
-    
-    /**
-     * TableColums for Tuesday Lunch 2
-     */
-    @FXML
-    private TableColumn<Food, String> shrt_descTL2, ndb_noTL2;
-    @FXML
-    private TableColumn<Food, Double> energ_kcalTL2, protein_gTL2, lipid_tot_gTL2;
-    @FXML
-    private TableColumn<Food, Double> carbohydrt_gTL2, fiber_td_gTL2, iron_mgTL2;
     
     /**
      * TableColumns for Tuesday Dinner
@@ -214,16 +183,6 @@ public class MainGUIController implements Initializable {
     private TableColumn<Food, Double> carbohydrt_gWBr, fiber_td_gWBr, iron_mgWBr;
     
     /**
-     * TableColums for Wednesday Breakfast 2
-     */
-    @FXML
-    private TableColumn<Food, String> shrt_descWBr2, ndb_noWBr2;
-    @FXML
-    private TableColumn<Food, Double> energ_kcalWBr2, protein_gWBr2, lipid_tot_gWBr2;
-    @FXML
-    private TableColumn<Food, Double> carbohydrt_gWBr2, fiber_td_gWBr2, iron_mgWBr2;
-    
-    /**
      * TableColums for Wednesday Lunch
      */
     @FXML
@@ -232,16 +191,6 @@ public class MainGUIController implements Initializable {
     private TableColumn<Food, Double> energ_kcalWL, protein_gWL, lipid_tot_gWL;
     @FXML
     private TableColumn<Food, Double> carbohydrt_gWL, fiber_td_gWL, iron_mgWL;
-    
-    /**
-     * TableColums for Wednesday Lunch 2
-     */
-    @FXML
-    private TableColumn<Food, String> shrt_descWL2, ndb_noWL2;
-    @FXML
-    private TableColumn<Food, Double> energ_kcalWL2, protein_gWL2, lipid_tot_gWL2;
-    @FXML
-    private TableColumn<Food, Double> carbohydrt_gWL2, fiber_td_gWL2, iron_mgWL2;
     
     /**
      * TableColumns for Wednesday Dinner
@@ -264,16 +213,6 @@ public class MainGUIController implements Initializable {
     private TableColumn<Food, Double> carbohydrt_gThBr, fiber_td_gThBr, iron_mgThBr;
     
     /**
-     * TableColums for Thursday Breakfast 2
-     */
-    @FXML
-    private TableColumn<Food, String> shrt_descThBr2, ndb_noThBr2;
-    @FXML
-    private TableColumn<Food, Double> energ_kcalThBr2, protein_gThBr2, lipid_tot_gThBr2;
-    @FXML
-    private TableColumn<Food, Double> carbohydrt_gThBr2, fiber_td_gThBr2, iron_mgThBr2;
-    
-    /**
      * TableColums for Thursday Lunch
      */
     @FXML
@@ -284,16 +223,6 @@ public class MainGUIController implements Initializable {
     private TableColumn<Food, Double> carbohydrt_gThL, fiber_td_gThL, iron_mgThL;
     
     /**
-     * TableColums for Thursday Lunch 2
-     */
-    @FXML
-    private TableColumn<Food, String> shrt_descThL2, ndb_noThL2;
-    @FXML
-    private TableColumn<Food, Double> energ_kcalThL2, protein_gThL2, lipid_tot_gThL2;
-    @FXML
-    private TableColumn<Food, Double> carbohydrt_gThL2, fiber_td_gThL2, iron_mgThL2;
-    
-    /**
      * TableColumns for Thursday Dinner
      */
     @FXML
@@ -302,6 +231,96 @@ public class MainGUIController implements Initializable {
     private TableColumn<Food, Double> energ_kcalThD, protein_gThD, lipid_tot_gThD;
     @FXML
     private TableColumn<Food, Double> carbohydrt_gThD, fiber_td_gThD, iron_mgThD;
+    
+    /**
+     * TableColums for Friday Breakfast
+     */
+    @FXML
+    private TableColumn<Food, String> shrt_descFBr, ndb_noFBr;
+    @FXML
+    private TableColumn<Food, Double> energ_kcalFBr, protein_gFBr, lipid_tot_gFBr;
+    @FXML
+    private TableColumn<Food, Double> carbohydrt_gFBr, fiber_td_gFBr, iron_mgFBr;
+    
+    /**
+     * TableColums for Friday Lunch
+     */
+    @FXML
+    private TableColumn<Food, String> shrt_descFL, ndb_noFL;
+    @FXML
+    private TableColumn<Food, Double> energ_kcalFL, protein_gFL, lipid_tot_gFL;
+    @FXML
+    private TableColumn<Food, Double> carbohydrt_gFL, fiber_td_gFL, iron_mgFL;
+    
+    /**
+     * TableColumns for Friday Dinner
+     */
+    @FXML
+    private TableColumn<Food, String> shrt_descFD, ndb_noFD;
+    @FXML
+    private TableColumn<Food, Double> energ_kcalFD, protein_gFD, lipid_tot_gFD;
+    @FXML
+    private TableColumn<Food, Double> carbohydrt_gFD, fiber_td_gFD, iron_mgFD;
+    
+    /**
+     * TableColums for Saturday Breakfast
+     */
+    @FXML
+    private TableColumn<Food, String> shrt_descSBr, ndb_noSBr;
+    @FXML
+    private TableColumn<Food, Double> energ_kcalSBr, protein_gSBr, lipid_tot_gSBr;
+    @FXML
+    private TableColumn<Food, Double> carbohydrt_gSBr, fiber_td_gSBr, iron_mgSBr;
+    
+    /**
+     * TableColums for Saturday Lunch
+     */
+    @FXML
+    private TableColumn<Food, String> shrt_descSL, ndb_noSL;
+    @FXML
+    private TableColumn<Food, Double> energ_kcalSL, protein_gSL, lipid_tot_gSL;
+    @FXML
+    private TableColumn<Food, Double> carbohydrt_gSL, fiber_td_gSL, iron_mgSL;
+    
+    /**
+     * TableColumns for Saturday Dinner
+     */
+    @FXML
+    private TableColumn<Food, String> shrt_descSD, ndb_noSD;
+    @FXML
+    private TableColumn<Food, Double> energ_kcalSD, protein_gSD, lipid_tot_gSD;
+    @FXML
+    private TableColumn<Food, Double> carbohydrt_gSD, fiber_td_gSD, iron_mgSD;
+    
+    /**
+     * TableColums for Sunday Breakfast
+     */
+    @FXML
+    private TableColumn<Food, String> shrt_descSuBr, ndb_noSuBr;
+    @FXML
+    private TableColumn<Food, Double> energ_kcalSuBr, protein_gSuBr, lipid_tot_gSuBr;
+    @FXML
+    private TableColumn<Food, Double> carbohydrt_gSuBr, fiber_td_gSuBr, iron_mgSuBr;
+    
+    /**
+     * TableColums for Saturday Lunch
+     */
+    @FXML
+    private TableColumn<Food, String> shrt_descSuL, ndb_noSuL;
+    @FXML
+    private TableColumn<Food, Double> energ_kcalSuL, protein_gSuL, lipid_tot_gSuL;
+    @FXML
+    private TableColumn<Food, Double> carbohydrt_gSuL, fiber_td_gSuL, iron_mgSuL;
+    
+    /**
+     * TableColumns for Saturday Dinner
+     */
+    @FXML
+    private TableColumn<Food, String> shrt_descSuD, ndb_noSuD;
+    @FXML
+    private TableColumn<Food, Double> energ_kcalSuD, protein_gSuD, lipid_tot_gSuD;
+    @FXML
+    private TableColumn<Food, Double> carbohydrt_gSuD, fiber_td_gSuD, iron_mgSuD;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -352,16 +371,6 @@ public class MainGUIController implements Initializable {
             }
         });
         
-        monBreakfast2.setOnMouseClicked((MouseEvent event1) -> {
-            if (event1.getClickCount() == 2) {
-                monBreakfast2List.add(toCopyFood);
-                monBreakfast2.setItems(monBreakfast2List);
-            }
-            if (event1.isControlDown() && event1.getClickCount() == 1) {
-                monBreakfast2List.remove(monBreakfast2.getSelectionModel().getSelectedItem());
-            }
-        });
-        
         monLunch.setOnMouseClicked((MouseEvent event1) -> {
             if (event1.getClickCount() == 2) {
                 monLunchList.add(toCopyFood);
@@ -369,16 +378,6 @@ public class MainGUIController implements Initializable {
             }
             if (event1.isControlDown() && event1.getClickCount() == 1) {
                 monLunchList.remove(monLunch.getSelectionModel().getSelectedItem());
-            }
-        });
-        
-        monLunch2.setOnMouseClicked((MouseEvent event1) -> {
-            if (event1.getClickCount() == 2) {
-                monLunch2List.add(toCopyFood);
-                monLunch2.setItems(monLunch2List);
-            }
-            if (event1.isControlDown() && event1.getClickCount() == 1) {
-                monLunch2List.remove(monLunch2.getSelectionModel().getSelectedItem());
             }
         });
         
@@ -402,16 +401,6 @@ public class MainGUIController implements Initializable {
             }
         });
         
-        tueBreakfast2.setOnMouseClicked((MouseEvent event1) -> {
-            if (event1.getClickCount() == 2) {
-                tueBreakfast2List.add(toCopyFood);
-                tueBreakfast2.setItems(tueBreakfast2List);
-            }
-            if (event1.isControlDown() && event1.getClickCount() == 1) {
-                tueBreakfast2List.remove(tueBreakfast2.getSelectionModel().getSelectedItem());
-            }
-        });
-        
         tueLunch.setOnMouseClicked((MouseEvent event1) -> {
             if (event1.getClickCount() == 2) {
                 tueLunchList.add(toCopyFood);
@@ -419,16 +408,6 @@ public class MainGUIController implements Initializable {
             }
             if (event1.isControlDown() && event1.getClickCount() == 1) {
                 tueLunchList.remove(tueLunch.getSelectionModel().getSelectedItem());
-            }
-        });
-        
-        tueLunch2.setOnMouseClicked((MouseEvent event1) -> {
-            if (event1.getClickCount() == 2) {
-                tueLunch2List.add(toCopyFood);
-                tueLunch2.setItems(tueLunch2List);
-            }
-            if (event1.isControlDown() && event1.getClickCount() == 1) {
-                tueLunch2List.remove(tueLunch2.getSelectionModel().getSelectedItem());
             }
         });
         
@@ -448,28 +427,32 @@ public class MainGUIController implements Initializable {
         createMainDBCells();
         
         createMondayBreakfastCells();
-        createMondayBreakfast2Cells();
         createMondayLunchCells();
-        createMondayLunch2Cells();
         createMondayDinnerCells();
         
         createTuesdayBreakfastCells();
-        createTuesdayBreakfast2Cells();
         createTuesdayLunchCells();
-        createTuesdayLunch2Cells();
         createTuesdayDinnerCells();
         
         createWednesdayBreakfastCells();
-        createWednesdayBreakfast2Cells();
         createWednesdayLunchCells();
-        createWednesdayLunch2Cells();
         createWednesdayDinnerCells();
         
         createThursdayBreakfastCells();
-        createThursdayBreakfast2Cells();
         createThursdayLunchCells();
-        createThursdayLunch2Cells();
         createThursdayDinnerCells();
+        
+        createFridayBreakfastCells();
+        createFridayLunchCells();
+        createFridayDinnerCells();
+        
+        createSaturdayBreakfastCells();
+        createSaturdayLunchCells();
+        createSaturdayDinnerCells();
+        
+        createSundayBreakfastCells();
+        createSundayLunchCells();
+        createSundayDinnerCells();
     }
 
     private void createMainDBCells() {
@@ -500,20 +483,6 @@ public class MainGUIController implements Initializable {
         iron_mgMBr.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.IRON));
     }
     
-    private void createMondayBreakfast2Cells() {
-        /**
-         * Creates Monday breakfast 2 cells
-         */
-        ndb_noMBr2.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.NDB_NO));
-        shrt_descMBr2.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.SHRT_DESC));
-        energ_kcalMBr2.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.ENERGY));
-        protein_gMBr2.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.PROTEIN));
-        lipid_tot_gMBr2.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.LIPIDS));
-        carbohydrt_gMBr2.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.CARBS));
-        fiber_td_gMBr2.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.FIBER));
-        iron_mgMBr2.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.IRON));
-    }
-    
     private void createMondayLunchCells() {
         /**
          * Creates Monday Lunch cells
@@ -526,20 +495,6 @@ public class MainGUIController implements Initializable {
         carbohydrt_gML.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.CARBS));
         fiber_td_gML.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.FIBER));
         iron_mgML.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.IRON));
-    }
-    
-    private void createMondayLunch2Cells() {
-        /**
-         * Creates Monday Lunch 2 cells
-         */
-        ndb_noML2.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.NDB_NO));
-        shrt_descML2.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.SHRT_DESC));
-        energ_kcalML2.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.ENERGY));
-        protein_gML2.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.PROTEIN));
-        lipid_tot_gML2.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.LIPIDS));
-        carbohydrt_gML2.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.CARBS));
-        fiber_td_gML2.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.FIBER));
-        iron_mgML2.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.IRON));
     }
     
     private void createMondayDinnerCells() {
@@ -570,20 +525,6 @@ public class MainGUIController implements Initializable {
         iron_mgTBr.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.IRON));
     }
     
-    private void createTuesdayBreakfast2Cells() {
-        /**
-         * Creates Tuesday Breakfast2 Cells
-         */
-        ndb_noTBr2.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.NDB_NO));
-        shrt_descTBr2.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.SHRT_DESC));
-        energ_kcalTBr2.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.ENERGY));
-        protein_gTBr2.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.PROTEIN));
-        lipid_tot_gTBr2.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.LIPIDS));
-        carbohydrt_gTBr2.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.CARBS));
-        fiber_td_gTBr2.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.FIBER));
-        iron_mgTBr2.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.IRON));
-    }
-    
     private void createTuesdayLunchCells() {
         /**
          * Creates Tuesday Lunch cells
@@ -596,20 +537,6 @@ public class MainGUIController implements Initializable {
         carbohydrt_gTL.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.CARBS));
         fiber_td_gTL.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.FIBER));
         iron_mgTL.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.IRON));
-    }
-    
-    private void createTuesdayLunch2Cells() {
-        /**
-         * Creates Tuesday Lunch cells
-         */
-        ndb_noTL2.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.NDB_NO));
-        shrt_descTL2.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.SHRT_DESC));
-        energ_kcalTL2.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.ENERGY));
-        protein_gTL2.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.PROTEIN));
-        lipid_tot_gTL2.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.LIPIDS));
-        carbohydrt_gTL2.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.CARBS));
-        fiber_td_gTL2.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.FIBER));
-        iron_mgTL2.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.IRON));
     }
     
     private void createTuesdayDinnerCells() {
@@ -640,20 +567,6 @@ public class MainGUIController implements Initializable {
         iron_mgWBr.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.IRON));
     }
     
-    private void createWednesdayBreakfast2Cells() {
-        /**
-         * Creates Wednesday breakfast 2 cells
-         */
-        ndb_noWBr2.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.NDB_NO));
-        shrt_descWBr2.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.SHRT_DESC));
-        energ_kcalWBr2.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.ENERGY));
-        protein_gWBr2.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.PROTEIN));
-        lipid_tot_gWBr2.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.LIPIDS));
-        carbohydrt_gWBr2.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.CARBS));
-        fiber_td_gWBr2.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.FIBER));
-        iron_mgWBr2.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.IRON));
-    }
-    
     private void createWednesdayLunchCells() {
         /**
          * Creates Wednesday Lunch cells
@@ -666,20 +579,6 @@ public class MainGUIController implements Initializable {
         carbohydrt_gWL.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.CARBS));
         fiber_td_gWL.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.FIBER));
         iron_mgWL.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.IRON));
-    }
-    
-    private void createWednesdayLunch2Cells() {
-        /**
-         * Creates Wednesday Lunch 2 cells
-         */
-        ndb_noWL2.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.NDB_NO));
-        shrt_descWL2.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.SHRT_DESC));
-        energ_kcalWL2.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.ENERGY));
-        protein_gWL2.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.PROTEIN));
-        lipid_tot_gWL2.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.LIPIDS));
-        carbohydrt_gWL2.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.CARBS));
-        fiber_td_gWL2.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.FIBER));
-        iron_mgWL2.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.IRON));
     }
     
     private void createWednesdayDinnerCells() {
@@ -710,20 +609,6 @@ public class MainGUIController implements Initializable {
         iron_mgThBr.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.IRON));
     }
     
-    private void createThursdayBreakfast2Cells() {
-        /**
-         * Creates Thursday Breakfast2 Cells
-         */
-        ndb_noThBr2.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.NDB_NO));
-        shrt_descThBr2.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.SHRT_DESC));
-        energ_kcalThBr2.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.ENERGY));
-        protein_gThBr2.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.PROTEIN));
-        lipid_tot_gThBr2.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.LIPIDS));
-        carbohydrt_gThBr2.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.CARBS));
-        fiber_td_gThBr2.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.FIBER));
-        iron_mgThBr2.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.IRON));
-    }
-    
     private void createThursdayLunchCells() {
         /**
          * Creates Thursday Lunch cells
@@ -738,20 +623,6 @@ public class MainGUIController implements Initializable {
         iron_mgThL.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.IRON));
     }
     
-    private void createThursdayLunch2Cells() {
-        /**
-         * Creates Thursday Lunch cells
-         */
-        ndb_noThL2.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.NDB_NO));
-        shrt_descThL2.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.SHRT_DESC));
-        energ_kcalThL2.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.ENERGY));
-        protein_gThL2.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.PROTEIN));
-        lipid_tot_gThL2.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.LIPIDS));
-        carbohydrt_gThL2.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.CARBS));
-        fiber_td_gThL2.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.FIBER));
-        iron_mgThL2.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.IRON));
-    }
-    
     private void createThursdayDinnerCells() {
         /**
          * Creates Thursday Dinner cells
@@ -764,6 +635,132 @@ public class MainGUIController implements Initializable {
         carbohydrt_gThD.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.CARBS));
         fiber_td_gThD.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.FIBER));
         iron_mgThD.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.IRON));
+    }
+    
+    private void createFridayBreakfastCells() {
+        /**
+         * Creates Friday Breakfast Cells
+         */
+        ndb_noFBr.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.NDB_NO));
+        shrt_descFBr.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.SHRT_DESC));
+        energ_kcalFBr.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.ENERGY));
+        protein_gFBr.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.PROTEIN));
+        lipid_tot_gFBr.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.LIPIDS));
+        carbohydrt_gFBr.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.CARBS));
+        fiber_td_gFBr.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.FIBER));
+        iron_mgFBr.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.IRON));
+    }
+    
+    private void createFridayLunchCells() {
+        /**
+         * Creates Friday Lunch cells
+         */
+        ndb_noFL.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.NDB_NO));
+        shrt_descFL.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.SHRT_DESC));
+        energ_kcalFL.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.ENERGY));
+        protein_gFL.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.PROTEIN));
+        lipid_tot_gFL.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.LIPIDS));
+        carbohydrt_gFL.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.CARBS));
+        fiber_td_gFL.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.FIBER));
+        iron_mgFL.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.IRON));
+    }
+    
+    private void createFridayDinnerCells() {
+        /**
+         * Creates Friday Dinner cells
+         */
+        ndb_noFD.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.NDB_NO));
+        shrt_descFD.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.SHRT_DESC));
+        energ_kcalFD.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.ENERGY));
+        protein_gFD.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.PROTEIN));
+        lipid_tot_gFD.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.LIPIDS));
+        carbohydrt_gFD.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.CARBS));
+        fiber_td_gFD.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.FIBER));
+        iron_mgFD.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.IRON));
+    }
+    
+    private void createSaturdayBreakfastCells() {
+        /**
+         * Creates Saturday Breakfast Cells
+         */
+        ndb_noSBr.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.NDB_NO));
+        shrt_descSBr.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.SHRT_DESC));
+        energ_kcalSBr.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.ENERGY));
+        protein_gSBr.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.PROTEIN));
+        lipid_tot_gSBr.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.LIPIDS));
+        carbohydrt_gSBr.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.CARBS));
+        fiber_td_gSBr.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.FIBER));
+        iron_mgSBr.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.IRON));
+    }
+    
+    private void createSaturdayLunchCells() {
+        /**
+         * Creates Saturday Lunch cells
+         */
+        ndb_noSL.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.NDB_NO));
+        shrt_descSL.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.SHRT_DESC));
+        energ_kcalSL.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.ENERGY));
+        protein_gSL.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.PROTEIN));
+        lipid_tot_gSL.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.LIPIDS));
+        carbohydrt_gSL.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.CARBS));
+        fiber_td_gSL.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.FIBER));
+        iron_mgSL.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.IRON));
+    }
+    
+    private void createSaturdayDinnerCells() {
+        /**
+         * Creates Saturday Dinner cells
+         */
+        ndb_noSD.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.NDB_NO));
+        shrt_descSD.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.SHRT_DESC));
+        energ_kcalSD.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.ENERGY));
+        protein_gSD.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.PROTEIN));
+        lipid_tot_gSD.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.LIPIDS));
+        carbohydrt_gSD.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.CARBS));
+        fiber_td_gSD.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.FIBER));
+        iron_mgSD.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.IRON));
+    }
+    
+    private void createSundayBreakfastCells() {
+        /**
+         * Creates Sunday Breakfast Cells
+         */
+        ndb_noSuBr.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.NDB_NO));
+        shrt_descSuBr.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.SHRT_DESC));
+        energ_kcalSuBr.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.ENERGY));
+        protein_gSuBr.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.PROTEIN));
+        lipid_tot_gSuBr.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.LIPIDS));
+        carbohydrt_gSuBr.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.CARBS));
+        fiber_td_gSuBr.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.FIBER));
+        iron_mgSuBr.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.IRON));
+    }
+    
+    private void createSundayLunchCells() {
+        /**
+         * Creates Sunday Lunch cells
+         */
+        ndb_noSuL.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.NDB_NO));
+        shrt_descSuL.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.SHRT_DESC));
+        energ_kcalSuL.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.ENERGY));
+        protein_gSuL.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.PROTEIN));
+        lipid_tot_gSuL.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.LIPIDS));
+        carbohydrt_gSuL.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.CARBS));
+        fiber_td_gSuL.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.FIBER));
+        iron_mgSuL.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.IRON));
+    }
+    
+    private void createSundayDinnerCells() {
+        /**
+         * Creates Sunday Dinner cells
+         */
+        ndb_noSuD.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.NDB_NO));
+        shrt_descSuD.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.SHRT_DESC));
+        energ_kcalSuD.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.ENERGY));
+        protein_gSuD.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.PROTEIN));
+        lipid_tot_gSuD.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.LIPIDS));
+        carbohydrt_gSuD.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.CARBS));
+        fiber_td_gSuD.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.FIBER));
+        iron_mgSuD.setCellValueFactory(new PropertyValueFactory<>(NutrientNames.IRON));
     }
 
 }

@@ -34,18 +34,6 @@
                                     <TableColumn fx:id="iron_mgMBr" prefWidth="75.0" text="Iron" />
                                   </columns>
                                 </TableView>
-                                <TableView fx:id="monBreakfast2" onMouseClicked="#addRemoveFood" prefHeight="109.0" prefWidth="551.0" AnchorPane.bottomAnchor="875.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="223.0">
-                                  <columns>
-                                    <TableColumn fx:id="ndb_noMBr2" prefWidth="75.0" text="NDB" />
-                                    <TableColumn fx:id="shrt_descMBr2" prefWidth="75.0" text="Description" />
-                                    <TableColumn fx:id="energ_kcalMBr2" prefWidth="75.0" text="Energy" />
-                                    <TableColumn fx:id="protein_gMBr2" prefWidth="75.0" text="Protein" />
-                                    <TableColumn fx:id="lipid_tot_gMBr2" prefWidth="75.0" text="Lipids" />
-                                    <TableColumn fx:id="carbohydrt_gMBr2" prefWidth="75.0" text="Carbs" />
-                                    <TableColumn fx:id="fiber_td_gMBr2" prefWidth="75.0" text="Fiber" />
-                                    <TableColumn fx:id="iron_mgMBr2" prefWidth="75.0" text="Iron" />
-                                  </columns>
-                                </TableView>
                                 <TableView fx:id="monLunch" onMouseClicked="#addRemoveFood" prefHeight="200.0" prefWidth="551.0" AnchorPane.bottomAnchor="675.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="332.0">
                                   <columns>
                                     <TableColumn fx:id="ndb_noML" prefWidth="75.0" text="NDB" />
@@ -58,18 +46,6 @@
                                     <TableColumn fx:id="iron_mgML" prefWidth="75.0" text="Iron" />
                                   </columns>
                                 </TableView>
-                                <TableView fx:id="monLunch2" onMouseClicked="#addRemoveFood" prefHeight="200.0" prefWidth="551.0" AnchorPane.bottomAnchor="370.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="637.0">
-                                  <columns>
-                                    <TableColumn fx:id="ndb_noML2" prefWidth="75.0" text="NDB" />
-                                    <TableColumn fx:id="shrt_descML2" prefWidth="75.0" text="Description" />
-                                    <TableColumn fx:id="energ_kcalML2" prefWidth="75.0" text="Energy" />
-                                    <TableColumn fx:id="protein_gML2" prefWidth="75.0" text="Protein" />
-                                    <TableColumn fx:id="lipid_tot_gML2" prefWidth="75.0" text="Lipids" />
-                                    <TableColumn fx:id="carbohydrt_gML2" prefWidth="75.0" text="Carbs" />
-                                    <TableColumn fx:id="fiber_td_gML2" prefWidth="75.0" text="Fiber" />
-                                    <TableColumn fx:id="iron_mgML2" prefWidth="75.0" text="Iron" />
-                                  </columns>
-                                </TableView>
                                 <TableView fx:id="monDinner" onMouseClicked="#addRemoveFood" prefHeight="105.0" prefWidth="551.0" AnchorPane.bottomAnchor="570.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="532.0">
                                   <columns>
                                     <TableColumn fx:id="ndb_noMD" prefWidth="75.0" text="NDB" />
@@ -80,18 +56,6 @@
                                     <TableColumn fx:id="carbohydrt_gMD" prefWidth="75.0" text="Carbs" />
                                     <TableColumn fx:id="fiber_td_gMD" prefWidth="75.0" text="Fiber" />
                                     <TableColumn fx:id="iron_mgMD" prefWidth="75.0" text="Iron" />
-                                  </columns>
-                                </TableView>
-                                <TableView fx:id="monTotal" prefHeight="51.0" prefWidth="566.0" AnchorPane.bottomAnchor="319.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="837.0">
-                                  <columns>
-                                    <TableColumn fx:id="ndb_noMT" prefWidth="75.0" text="NDB" />
-                                    <TableColumn fx:id="shrt_descMT" prefWidth="75.0" text="Description" />
-                                    <TableColumn fx:id="energ_kcalMT" prefWidth="75.0" text="Energy" />
-                                    <TableColumn fx:id="protein_gMT" prefWidth="75.0" text="Protein" />
-                                    <TableColumn fx:id="lipid_tot_gMT" prefWidth="75.0" text="Lipids" />
-                                    <TableColumn fx:id="carbohydrt_gMT" prefWidth="75.0" text="Carbs" />
-                                    <TableColumn fx:id="fiber_td_gMT" prefWidth="75.0" text="Fiber" />
-                                    <TableColumn fx:id="iron_mgMT" prefWidth="75.0" text="Iron" />
                                   </columns>
                                 </TableView>
                               </children>
@@ -122,18 +86,6 @@
                                     <TableColumn fx:id="iron_mgTBr" prefWidth="75.0" text="Iron" />
                                   </columns>
                                 </TableView>
-                                <TableView fx:id="tueBreakfast2" onMouseClicked="#addRemoveFood" prefHeight="109.0" prefWidth="551.0" AnchorPane.bottomAnchor="875.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="223.0">
-                                  <columns>
-                                    <TableColumn fx:id="ndb_noTBr2" prefWidth="75.0" text="NDB" />
-                                    <TableColumn fx:id="shrt_descTBr2" prefWidth="75.0" text="Description" />
-                                    <TableColumn fx:id="energ_kcalTBr2" prefWidth="75.0" text="Energy" />
-                                    <TableColumn fx:id="protein_gTBr2" prefWidth="75.0" text="Protein" />
-                                    <TableColumn fx:id="lipid_tot_gTBr2" prefWidth="75.0" text="Lipids" />
-                                    <TableColumn fx:id="carbohydrt_gTBr2" prefWidth="75.0" text="Carbs" />
-                                    <TableColumn fx:id="fiber_td_gTBr2" prefWidth="75.0" text="Fiber" />
-                                    <TableColumn fx:id="iron_mgTBr2" prefWidth="75.0" text="Iron" />
-                                  </columns>
-                                </TableView>
                                 <TableView fx:id="tueLunch" onMouseClicked="#addRemoveFood" prefHeight="200.0" prefWidth="551.0" AnchorPane.bottomAnchor="675.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="332.0">
                                   <columns>
                                     <TableColumn fx:id="ndb_noTL" prefWidth="75.0" text="NDB" />
@@ -146,18 +98,6 @@
                                     <TableColumn fx:id="iron_mgTL" prefWidth="75.0" text="Iron" />
                                   </columns>
                                 </TableView>
-                                <TableView fx:id="tueLunch2" onMouseClicked="#addRemoveFood" prefHeight="200.0" prefWidth="551.0" AnchorPane.bottomAnchor="370.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="637.0">
-                                  <columns>
-                                    <TableColumn fx:id="ndb_noTL2" prefWidth="75.0" text="NDB" />
-                                    <TableColumn fx:id="shrt_descTL2" prefWidth="75.0" text="Description" />
-                                    <TableColumn fx:id="energ_kcalTL2" prefWidth="75.0" text="Energy" />
-                                    <TableColumn fx:id="protein_gTL2" prefWidth="75.0" text="Protein" />
-                                    <TableColumn fx:id="lipid_tot_gTL2" prefWidth="75.0" text="Lipids" />
-                                    <TableColumn fx:id="carbohydrt_gTL2" prefWidth="75.0" text="Carbs" />
-                                    <TableColumn fx:id="fiber_td_gTL2" prefWidth="75.0" text="Fiber" />
-                                    <TableColumn fx:id="iron_mgTL2" prefWidth="75.0" text="Iron" />
-                                  </columns>
-                                </TableView>
                                 <TableView fx:id="tueDinner" onMouseClicked="#addRemoveFood" prefHeight="105.0" prefWidth="551.0" AnchorPane.bottomAnchor="570.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="532.0">
                                   <columns>
                                     <TableColumn fx:id="ndb_noTD" prefWidth="75.0" text="NDB" />
@@ -168,18 +108,6 @@
                                     <TableColumn fx:id="carbohydrt_gTD" prefWidth="75.0" text="Carbs" />
                                     <TableColumn fx:id="fiber_td_gTD" prefWidth="75.0" text="Fiber" />
                                     <TableColumn fx:id="iron_mgTD" prefWidth="75.0" text="Iron" />
-                                  </columns>
-                                </TableView>
-                                <TableView fx:id="tueTotal" prefHeight="51.0" prefWidth="566.0" AnchorPane.bottomAnchor="319.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="837.0">
-                                  <columns>
-                                    <TableColumn fx:id="ndb_noTT" prefWidth="75.0" text="NDB" />
-                                    <TableColumn fx:id="shrt_descTT" prefWidth="75.0" text="Description" />
-                                    <TableColumn fx:id="energ_kcalTT" prefWidth="75.0" text="Energy" />
-                                    <TableColumn fx:id="protein_gTT" prefWidth="75.0" text="Protein" />
-                                    <TableColumn fx:id="lipid_tot_gTT" prefWidth="75.0" text="Lipids" />
-                                    <TableColumn fx:id="carbohydrt_gTT" prefWidth="75.0" text="Carbs" />
-                                    <TableColumn fx:id="fiber_td_gTT" prefWidth="75.0" text="Fiber" />
-                                    <TableColumn fx:id="iron_mgTT" prefWidth="75.0" text="Iron" />
                                   </columns>
                                 </TableView>
                               </children>
@@ -210,18 +138,6 @@
                                     <TableColumn fx:id="iron_mgWBr" prefWidth="75.0" text="Iron" />
                                   </columns>
                                 </TableView>
-                                <TableView fx:id="wedBreakfast2" onMouseClicked="#addRemoveFood" prefHeight="109.0" prefWidth="551.0" AnchorPane.bottomAnchor="875.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="223.0">
-                                  <columns>
-                                    <TableColumn fx:id="ndb_noWBr2" prefWidth="75.0" text="NDB" />
-                                    <TableColumn fx:id="shrt_descWBr2" prefWidth="75.0" text="Description" />
-                                    <TableColumn fx:id="energ_kcalWBr2" prefWidth="75.0" text="Energy" />
-                                    <TableColumn fx:id="protein_gWBr2" prefWidth="75.0" text="Protein" />
-                                    <TableColumn fx:id="lipid_tot_gWBr2" prefWidth="75.0" text="Lipids" />
-                                    <TableColumn fx:id="carbohydrt_gWBr2" prefWidth="75.0" text="Carbs" />
-                                    <TableColumn fx:id="fiber_td_gWBr2" prefWidth="75.0" text="Fiber" />
-                                    <TableColumn fx:id="iron_mgWBr2" prefWidth="75.0" text="Iron" />
-                                  </columns>
-                                </TableView>
                                 <TableView fx:id="wedLunch" onMouseClicked="#addRemoveFood" prefHeight="200.0" prefWidth="551.0" AnchorPane.bottomAnchor="675.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="332.0">
                                   <columns>
                                     <TableColumn fx:id="ndb_noWL" prefWidth="75.0" text="NDB" />
@@ -234,18 +150,6 @@
                                     <TableColumn fx:id="iron_mgWL" prefWidth="75.0" text="Iron" />
                                   </columns>
                                 </TableView>
-                                <TableView fx:id="wedLunch2" onMouseClicked="#addRemoveFood" prefHeight="200.0" prefWidth="551.0" AnchorPane.bottomAnchor="370.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="637.0">
-                                  <columns>
-                                    <TableColumn fx:id="ndb_noWL2" prefWidth="75.0" text="NDB" />
-                                    <TableColumn fx:id="shrt_descWL2" prefWidth="75.0" text="Description" />
-                                    <TableColumn fx:id="energ_kcalWL2" prefWidth="75.0" text="Energy" />
-                                    <TableColumn fx:id="protein_gWL2" prefWidth="75.0" text="Protein" />
-                                    <TableColumn fx:id="lipid_tot_gWL2" prefWidth="75.0" text="Lipids" />
-                                    <TableColumn fx:id="carbohydrt_gWL2" prefWidth="75.0" text="Carbs" />
-                                    <TableColumn fx:id="fiber_td_gWL2" prefWidth="75.0" text="Fiber" />
-                                    <TableColumn fx:id="iron_mgWL2" prefWidth="75.0" text="Iron" />
-                                  </columns>
-                                </TableView>
                                 <TableView fx:id="wedDinner" onMouseClicked="#addRemoveFood" prefHeight="105.0" prefWidth="551.0" AnchorPane.bottomAnchor="570.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="532.0">
                                   <columns>
                                     <TableColumn fx:id="ndb_noWD" prefWidth="75.0" text="NDB" />
@@ -256,18 +160,6 @@
                                     <TableColumn fx:id="carbohydrt_gWD" prefWidth="75.0" text="Carbs" />
                                     <TableColumn fx:id="fiber_td_gWD" prefWidth="75.0" text="Fiber" />
                                     <TableColumn fx:id="iron_mgWD" prefWidth="75.0" text="Iron" />
-                                  </columns>
-                                </TableView>
-                                <TableView fx:id="wedTotal" prefHeight="51.0" prefWidth="566.0" AnchorPane.bottomAnchor="319.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="837.0">
-                                  <columns>
-                                    <TableColumn fx:id="ndb_noWT" prefWidth="75.0" text="NDB" />
-                                    <TableColumn fx:id="shrt_descWT" prefWidth="75.0" text="Description" />
-                                    <TableColumn fx:id="energ_kcalWT" prefWidth="75.0" text="Energy" />
-                                    <TableColumn fx:id="protein_gWT" prefWidth="75.0" text="Protein" />
-                                    <TableColumn fx:id="lipid_tot_gWT" prefWidth="75.0" text="Lipids" />
-                                    <TableColumn fx:id="carbohydrt_gWT" prefWidth="75.0" text="Carbs" />
-                                    <TableColumn fx:id="fiber_td_gWT" prefWidth="75.0" text="Fiber" />
-                                    <TableColumn fx:id="iron_mgWT" prefWidth="75.0" text="Iron" />
                                   </columns>
                                 </TableView>
                               </children>
@@ -298,40 +190,16 @@
                                     <TableColumn fx:id="iron_mgThBr" prefWidth="75.0" text="Iron" />
                                   </columns>
                                 </TableView>
-                                <TableView fx:id="thBreakfast2" onMouseClicked="#addRemoveFood" prefHeight="109.0" prefWidth="551.0" AnchorPane.bottomAnchor="875.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="223.0">
-                                  <columns>
-                                    <TableColumn fx:id="ndb_noThBr2" prefWidth="75.0" text="NDB" />
-                                    <TableColumn fx:id="shrt_descThBr2" prefWidth="75.0" text="Description" />
-                                    <TableColumn fx:id="energ_kcalThBr2" prefWidth="75.0" text="Energy" />
-                                    <TableColumn fx:id="protein_gThBr2" prefWidth="75.0" text="Protein" />
-                                    <TableColumn fx:id="lipid_tot_gThBr2" prefWidth="75.0" text="Lipids" />
-                                    <TableColumn fx:id="carbohydrt_gThBr2" prefWidth="75.0" text="Carbs" />
-                                    <TableColumn fx:id="fiber_td_gThBr2" prefWidth="75.0" text="Fiber" />
-                                    <TableColumn fx:id="iron_mgWThBr2" prefWidth="75.0" text="Iron" />
-                                  </columns>
-                                </TableView>
                                 <TableView fx:id="thLunch" onMouseClicked="#addRemoveFood" prefHeight="200.0" prefWidth="551.0" AnchorPane.bottomAnchor="675.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="332.0">
                                   <columns>
                                     <TableColumn fx:id="ndb_noThL" prefWidth="75.0" text="NDB" />
-                                    <TableColumn fx:id="shrt_descThWL" prefWidth="75.0" text="Description" />
+                                    <TableColumn fx:id="shrt_descThL" prefWidth="75.0" text="Description" />
                                     <TableColumn fx:id="energ_kcalThL" prefWidth="75.0" text="Energy" />
                                     <TableColumn fx:id="protein_gThL" prefWidth="75.0" text="Protein" />
                                     <TableColumn fx:id="lipid_tot_gThL" prefWidth="75.0" text="Lipids" />
                                     <TableColumn fx:id="carbohydrt_gThL" prefWidth="75.0" text="Carbs" />
                                     <TableColumn fx:id="fiber_td_gThL" prefWidth="75.0" text="Fiber" />
                                     <TableColumn fx:id="iron_mgThL" prefWidth="75.0" text="Iron" />
-                                  </columns>
-                                </TableView>
-                                <TableView fx:id="thLunch2" onMouseClicked="#addRemoveFood" prefHeight="200.0" prefWidth="551.0" AnchorPane.bottomAnchor="370.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="637.0">
-                                  <columns>
-                                    <TableColumn fx:id="ndb_noThL2" prefWidth="75.0" text="NDB" />
-                                    <TableColumn fx:id="shrt_descThWL2" prefWidth="75.0" text="Description" />
-                                    <TableColumn fx:id="energ_kcalThL2" prefWidth="75.0" text="Energy" />
-                                    <TableColumn fx:id="protein_gThL2" prefWidth="75.0" text="Protein" />
-                                    <TableColumn fx:id="lipid_tot_gThL2" prefWidth="75.0" text="Lipids" />
-                                    <TableColumn fx:id="carbohydrt_gThL2" prefWidth="75.0" text="Carbs" />
-                                    <TableColumn fx:id="fiber_td_gThL2" prefWidth="75.0" text="Fiber" />
-                                    <TableColumn fx:id="iron_mgThL2" prefWidth="75.0" text="Iron" />
                                   </columns>
                                 </TableView>
                                 <TableView fx:id="thDinner" onMouseClicked="#addRemoveFood" prefHeight="105.0" prefWidth="551.0" AnchorPane.bottomAnchor="570.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="532.0">
@@ -346,18 +214,6 @@
                                     <TableColumn fx:id="iron_mgThD" prefWidth="75.0" text="Iron" />
                                   </columns>
                                 </TableView>
-                                <TableView fx:id="thTotal" prefHeight="51.0" prefWidth="566.0" AnchorPane.bottomAnchor="319.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="837.0">
-                                  <columns>
-                                    <TableColumn fx:id="ndb_noThT" prefWidth="75.0" text="NDB" />
-                                    <TableColumn fx:id="shrt_descThT" prefWidth="75.0" text="Description" />
-                                    <TableColumn fx:id="energ_kcalThT" prefWidth="75.0" text="Energy" />
-                                    <TableColumn fx:id="protein_gThT" prefWidth="75.0" text="Protein" />
-                                    <TableColumn fx:id="lipid_tot_gThT" prefWidth="75.0" text="Lipids" />
-                                    <TableColumn fx:id="carbohydrt_gThT" prefWidth="75.0" text="Carbs" />
-                                    <TableColumn fx:id="fiber_td_gThT" prefWidth="75.0" text="Fiber" />
-                                    <TableColumn fx:id="iron_mgThT" prefWidth="75.0" text="Iron" />
-                                  </columns>
-                                </TableView>
                               </children>
                             </AnchorPane>
                           </content>
@@ -368,17 +224,158 @@
                 </Tab>
                 <Tab text="Friday">
                   <content>
-                    <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" pickOnBounds="true" prefHeight="180.0" prefWidth="-1.0" snapToPixel="false">
+                      <children>
+                        <ScrollPane fitToWidth="true" prefHeight="735.0" prefWidth="566.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <content>
+                            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="1207.0" prefWidth="566.0">
+                              <children>
+                                <TableView fx:id="friBreakfast" onMouseClicked="#addRemoveFood" prefHeight="227.0" prefWidth="566.0" AnchorPane.bottomAnchor="981.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="-1.0">
+                                  <columns>
+                                    <TableColumn fx:id="ndb_noFBr" prefWidth="75.0" text="NDB" />
+                                    <TableColumn fx:id="shrt_descFBr" prefWidth="75.0" text="Description" />
+                                    <TableColumn fx:id="energ_kcalFBr" prefWidth="75.0" text="Energy" />
+                                    <TableColumn fx:id="protein_gFBr" prefWidth="75.0" text="Protein" />
+                                    <TableColumn fx:id="lipid_tot_gFBr" prefWidth="75.0" text="Lipids" />
+                                    <TableColumn fx:id="carbohydrt_gFBr" prefWidth="75.0" text="Carbs" />
+                                    <TableColumn fx:id="fiber_td_gFBr" prefWidth="75.0" text="Fiber" />
+                                    <TableColumn fx:id="iron_mgFBr" prefWidth="75.0" text="Iron" />
+                                  </columns>
+                                </TableView>
+                                <TableView fx:id="friLunch" onMouseClicked="#addRemoveFood" prefHeight="200.0" prefWidth="551.0" AnchorPane.bottomAnchor="675.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="332.0">
+                                  <columns>
+                                    <TableColumn fx:id="ndb_noFL" prefWidth="75.0" text="NDB" />
+                                    <TableColumn fx:id="shrt_descFL" prefWidth="75.0" text="Description" />
+                                    <TableColumn fx:id="energ_kcalFL" prefWidth="75.0" text="Energy" />
+                                    <TableColumn fx:id="protein_gFL" prefWidth="75.0" text="Protein" />
+                                    <TableColumn fx:id="lipid_tot_gFL" prefWidth="75.0" text="Lipids" />
+                                    <TableColumn fx:id="carbohydrt_gFL" prefWidth="75.0" text="Carbs" />
+                                    <TableColumn fx:id="fiber_td_gFL" prefWidth="75.0" text="Fiber" />
+                                    <TableColumn fx:id="iron_mgFL" prefWidth="75.0" text="Iron" />
+                                  </columns>
+                                </TableView>
+                                <TableView fx:id="friDinner" onMouseClicked="#addRemoveFood" prefHeight="105.0" prefWidth="551.0" AnchorPane.bottomAnchor="570.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="532.0">
+                                  <columns>
+                                    <TableColumn fx:id="ndb_noFD" prefWidth="75.0" text="NDB" />
+                                    <TableColumn fx:id="shrt_descFD" prefWidth="75.0" text="Description" />
+                                    <TableColumn fx:id="energ_kcalFD" prefWidth="75.0" text="Energy" />
+                                    <TableColumn fx:id="protein_gFD" prefWidth="75.0" text="Protein" />
+                                    <TableColumn fx:id="lipid_tot_gFD" prefWidth="75.0" text="Lipids" />
+                                    <TableColumn fx:id="carbohydrt_gFD" prefWidth="75.0" text="Carbs" />
+                                    <TableColumn fx:id="fiber_td_gFD" prefWidth="75.0" text="Fiber" />
+                                    <TableColumn fx:id="iron_mgFD" prefWidth="75.0" text="Iron" />
+                                  </columns>
+                                </TableView>
+                              </children>
+                            </AnchorPane>
+                          </content>
+                        </ScrollPane>
+                      </children>
+                    </AnchorPane>
                   </content>
                 </Tab>
                 <Tab text="Saturday">
                   <content>
-                    <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" pickOnBounds="true" prefHeight="180.0" prefWidth="-1.0" snapToPixel="false">
+                      <children>
+                        <ScrollPane fitToWidth="true" prefHeight="735.0" prefWidth="566.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <content>
+                            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="1207.0" prefWidth="566.0">
+                              <children>
+                                <TableView fx:id="satBreakfast" onMouseClicked="#addRemoveFood" prefHeight="227.0" prefWidth="566.0" AnchorPane.bottomAnchor="981.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="-1.0">
+                                  <columns>
+                                    <TableColumn fx:id="ndb_noSBr" prefWidth="75.0" text="NDB" />
+                                    <TableColumn fx:id="shrt_descSBr" prefWidth="75.0" text="Description" />
+                                    <TableColumn fx:id="energ_kcalSBr" prefWidth="75.0" text="Energy" />
+                                    <TableColumn fx:id="protein_gSBr" prefWidth="75.0" text="Protein" />
+                                    <TableColumn fx:id="lipid_tot_gSBr" prefWidth="75.0" text="Lipids" />
+                                    <TableColumn fx:id="carbohydrt_gSBr" prefWidth="75.0" text="Carbs" />
+                                    <TableColumn fx:id="fiber_td_gSBr" prefWidth="75.0" text="Fiber" />
+                                    <TableColumn fx:id="iron_mgSBr" prefWidth="75.0" text="Iron" />
+                                  </columns>
+                                </TableView>
+                                <TableView fx:id="satLunch" onMouseClicked="#addRemoveFood" prefHeight="200.0" prefWidth="551.0" AnchorPane.bottomAnchor="675.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="332.0">
+                                  <columns>
+                                    <TableColumn fx:id="ndb_noSL" prefWidth="75.0" text="NDB" />
+                                    <TableColumn fx:id="shrt_descSL" prefWidth="75.0" text="Description" />
+                                    <TableColumn fx:id="energ_kcalSL" prefWidth="75.0" text="Energy" />
+                                    <TableColumn fx:id="protein_gSL" prefWidth="75.0" text="Protein" />
+                                    <TableColumn fx:id="lipid_tot_gSL" prefWidth="75.0" text="Lipids" />
+                                    <TableColumn fx:id="carbohydrt_gSL" prefWidth="75.0" text="Carbs" />
+                                    <TableColumn fx:id="fiber_td_gSL" prefWidth="75.0" text="Fiber" />
+                                    <TableColumn fx:id="iron_mgSL" prefWidth="75.0" text="Iron" />
+                                  </columns>
+                                </TableView>
+                                <TableView fx:id="satDinner" onMouseClicked="#addRemoveFood" prefHeight="105.0" prefWidth="551.0" AnchorPane.bottomAnchor="570.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="532.0">
+                                  <columns>
+                                    <TableColumn fx:id="ndb_noSD" prefWidth="75.0" text="NDB" />
+                                    <TableColumn fx:id="shrt_descSD" prefWidth="75.0" text="Description" />
+                                    <TableColumn fx:id="energ_kcalSD" prefWidth="75.0" text="Energy" />
+                                    <TableColumn fx:id="protein_gSD" prefWidth="75.0" text="Protein" />
+                                    <TableColumn fx:id="lipid_tot_gSD" prefWidth="75.0" text="Lipids" />
+                                    <TableColumn fx:id="carbohydrt_gSD" prefWidth="75.0" text="Carbs" />
+                                    <TableColumn fx:id="fiber_td_gSD" prefWidth="75.0" text="Fiber" />
+                                    <TableColumn fx:id="iron_mgSD" prefWidth="75.0" text="Iron" />
+                                  </columns>
+                                </TableView>
+                              </children>
+                            </AnchorPane>
+                          </content>
+                        </ScrollPane>
+                      </children>
+                    </AnchorPane>
                   </content>
                 </Tab>
                 <Tab text="Sunday">
                   <content>
-                    <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" pickOnBounds="true" prefHeight="180.0" prefWidth="-1.0" snapToPixel="false">
+                      <children>
+                        <ScrollPane fitToWidth="true" prefHeight="735.0" prefWidth="566.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <content>
+                            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="1207.0" prefWidth="566.0">
+                              <children>
+                                <TableView fx:id="sunBreakfast" onMouseClicked="#addRemoveFood" prefHeight="227.0" prefWidth="566.0" AnchorPane.bottomAnchor="981.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="-1.0">
+                                  <columns>
+                                    <TableColumn fx:id="ndb_noSuBr" prefWidth="75.0" text="NDB" />
+                                    <TableColumn fx:id="shrt_descSuBr" prefWidth="75.0" text="Description" />
+                                    <TableColumn fx:id="energ_kcalSuBr" prefWidth="75.0" text="Energy" />
+                                    <TableColumn fx:id="protein_gSuBr" prefWidth="75.0" text="Protein" />
+                                    <TableColumn fx:id="lipid_tot_gSuBr" prefWidth="75.0" text="Lipids" />
+                                    <TableColumn fx:id="carbohydrt_gSuBr" prefWidth="75.0" text="Carbs" />
+                                    <TableColumn fx:id="fiber_td_gSuBr" prefWidth="75.0" text="Fiber" />
+                                    <TableColumn fx:id="iron_mgSuBr" prefWidth="75.0" text="Iron" />
+                                  </columns>
+                                </TableView>
+                                <TableView fx:id="sunLunch" onMouseClicked="#addRemoveFood" prefHeight="200.0" prefWidth="551.0" AnchorPane.bottomAnchor="675.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="332.0">
+                                  <columns>
+                                    <TableColumn fx:id="ndb_noSuL" prefWidth="75.0" text="NDB" />
+                                    <TableColumn fx:id="shrt_descSuL" prefWidth="75.0" text="Description" />
+                                    <TableColumn fx:id="energ_kcalSuL" prefWidth="75.0" text="Energy" />
+                                    <TableColumn fx:id="protein_gSuL" prefWidth="75.0" text="Protein" />
+                                    <TableColumn fx:id="lipid_tot_gSuL" prefWidth="75.0" text="Lipids" />
+                                    <TableColumn fx:id="carbohydrt_gSuL" prefWidth="75.0" text="Carbs" />
+                                    <TableColumn fx:id="fiber_td_gSuL" prefWidth="75.0" text="Fiber" />
+                                    <TableColumn fx:id="iron_mgSuL" prefWidth="75.0" text="Iron" />
+                                  </columns>
+                                </TableView>
+                                <TableView fx:id="sunDinner" onMouseClicked="#addRemoveFood" prefHeight="105.0" prefWidth="551.0" AnchorPane.bottomAnchor="570.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="532.0">
+                                  <columns>
+                                    <TableColumn fx:id="ndb_noSuD" prefWidth="75.0" text="NDB" />
+                                    <TableColumn fx:id="shrt_descSuD" prefWidth="75.0" text="Description" />
+                                    <TableColumn fx:id="energ_kcalSuD" prefWidth="75.0" text="Energy" />
+                                    <TableColumn fx:id="protein_gSuD" prefWidth="75.0" text="Protein" />
+                                    <TableColumn fx:id="lipid_tot_gSuD" prefWidth="75.0" text="Lipids" />
+                                    <TableColumn fx:id="carbohydrt_gSuD" prefWidth="75.0" text="Carbs" />
+                                    <TableColumn fx:id="fiber_td_gSuD" prefWidth="75.0" text="Fiber" />
+                                    <TableColumn fx:id="iron_mgSuD" prefWidth="75.0" text="Iron" />
+                                  </columns>
+                                </TableView>
+                              </children>
+                            </AnchorPane>
+                          </content>
+                        </ScrollPane>
+                      </children>
+                    </AnchorPane>
                   </content>
                 </Tab>
               </tabs>
