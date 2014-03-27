@@ -8,19 +8,24 @@ package dietonjava;
 import dietonjava.foodhandling.Food;
 import dietonjava.foodhandling.FoodSQL;
 import dietonjava.foodhandling.NutrientNames;
+import java.io.File;
 import java.net.URL;
 import java.util.ResourceBundle;
 import static javafx.collections.FXCollections.observableArrayList;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.FileChooser;
+import javafx.stage.Stage;
 
 /**
  *
@@ -55,16 +60,31 @@ public class MainGUIController implements Initializable {
     private TableView<Food> thBreakfast, thLunch, thDinner;
     
     @FXML
-    private TableView<Food> fBreakfast, fLunch, fDinner;
+    private TableView<Food> friBreakfast, friLunch, friDinner;
     
     @FXML
-    private TableView<Food> sBreakfast, sLunch, sDinner;
+    private TableView<Food> satBreakfast, satLunch, satDinner;
     
     @FXML
-    private TableView<Food> suBreakfast, suLunch, suDinner;
+    private TableView<Food> sunBreakfast, sunLunch, sunDinner;
+    
+    @FXML
+    private Button openFile;
 
+    /**
+     * The following variables hold each person's data
+     */
     @FXML
     private TextField searchBox;
+    
+    @FXML
+    private TextField nameText, surnameText, addressText, telText, dateText;
+    
+    @FXML
+    private TextField kgText, ageText, heightText;
+    
+    @FXML
+    private TextArea notesTextArea;
 
     /**
      * Temp food that is drag'n'dropped from the DB
@@ -341,6 +361,61 @@ public class MainGUIController implements Initializable {
             foodDB.setItems(list);
         }
     }
+    
+    /**
+     * When the button New is pressed, it clears all fields and meal tables
+     */
+    @FXML
+    private void createNewProgram(MouseEvent event) {
+        nameText.setText("");
+        surnameText.setText("");
+        addressText.setText("");
+        telText.setText("");
+        dateText.setText("");
+        notesTextArea.setText("");
+        kgText.setText("");
+        ageText.setText("");
+        heightText.setText("");
+        
+        monBreakfastList.clear();
+        monLunchList.clear();
+        monDinnerList.clear();
+        
+        tueBreakfastList.clear();
+        tueLunchList.clear();
+        tueDinnerList.clear();
+        
+        wedBreakfastList.clear();
+        wedLunchList.clear();
+        wedDinnerList.clear();
+        
+        thBreakfastList.clear();
+        thLunchList.clear();
+        thDinnerList.clear();
+        
+        fBreakfastList.clear();
+        fLunchList.clear();
+        fDinnerList.clear();
+        
+        sBreakfastList.clear();
+        sLunchList.clear();
+        sDinnerList.clear();
+        
+        suBreakfastList.clear();
+        suLunchList.clear();
+        suDinnerList.clear();
+    }
+    
+    /**
+     * NOT FINISHED
+     */
+    @FXML
+    private void openExistingFile(MouseEvent event) {
+        openFile.setOnMouseClicked((MouseEvent e1) -> {
+            FileChooser fChooser = new FileChooser();
+            File file = fChooser.showOpenDialog(openFile.getScene().getWindow());
+        });
+    }
 
     /**
      * When a food in foodDB is clicked, its values are assigned to a temp
@@ -418,6 +493,156 @@ public class MainGUIController implements Initializable {
             }
             if (event1.isControlDown() && event1.getClickCount() == 1) {
                 tueDinnerList.remove(tueDinner.getSelectionModel().getSelectedItem());
+            }
+        });
+        
+        wedBreakfast.setOnMouseClicked((MouseEvent event1) -> {
+            if (event1.getClickCount() == 2) {
+                wedBreakfastList.add(toCopyFood);
+                wedBreakfast.setItems(wedBreakfastList);
+            }
+            if (event1.isControlDown() && event1.getClickCount() == 1) {
+                wedBreakfastList.remove(wedBreakfast.getSelectionModel().getSelectedItem());
+            }
+        });
+        
+        wedLunch.setOnMouseClicked((MouseEvent event1) -> {
+            if (event1.getClickCount() == 2) {
+                wedLunchList.add(toCopyFood);
+                wedLunch.setItems(wedLunchList);
+            }
+            if (event1.isControlDown() && event1.getClickCount() == 1) {
+                wedLunchList.remove(wedLunch.getSelectionModel().getSelectedItem());
+            }
+        });
+        
+        wedDinner.setOnMouseClicked((MouseEvent event1) -> {
+            if (event1.getClickCount() == 2) {
+                wedDinnerList.add(toCopyFood);
+                wedDinner.setItems(wedDinnerList);
+            }
+            if (event1.isControlDown() && event1.getClickCount() == 1) {
+                wedDinnerList.remove(wedDinner.getSelectionModel().getSelectedItem());
+            }
+        });
+        
+        thBreakfast.setOnMouseClicked((MouseEvent event1) -> {
+            if (event1.getClickCount() == 2) {
+                thBreakfastList.add(toCopyFood);
+                thBreakfast.setItems(thBreakfastList);
+            }
+            if (event1.isControlDown() && event1.getClickCount() == 1) {
+                thBreakfastList.remove(thBreakfast.getSelectionModel().getSelectedItem());
+            }
+        });
+        
+        thLunch.setOnMouseClicked((MouseEvent event1) -> {
+            if (event1.getClickCount() == 2) {
+                thLunchList.add(toCopyFood);
+                thLunch.setItems(thLunchList);
+            }
+            if (event1.isControlDown() && event1.getClickCount() == 1) {
+                thLunchList.remove(thLunch.getSelectionModel().getSelectedItem());
+            }
+        });
+        
+        thDinner.setOnMouseClicked((MouseEvent event1) -> {
+            if (event1.getClickCount() == 2) {
+                thDinnerList.add(toCopyFood);
+                thDinner.setItems(thDinnerList);
+            }
+            if (event1.isControlDown() && event1.getClickCount() == 1) {
+                thDinnerList.remove(thDinner.getSelectionModel().getSelectedItem());
+            }
+        });
+        
+        friBreakfast.setOnMouseClicked((MouseEvent event1) -> {
+            if (event1.getClickCount() == 2) {
+                fBreakfastList.add(toCopyFood);
+                friBreakfast.setItems(fBreakfastList);
+            }
+            if (event1.isControlDown() && event1.getClickCount() == 1) {
+                fBreakfastList.remove(friBreakfast.getSelectionModel().getSelectedItem());
+            }
+        });
+        
+        friLunch.setOnMouseClicked((MouseEvent event1) -> {
+            if (event1.getClickCount() == 2) {
+                fLunchList.add(toCopyFood);
+                friLunch.setItems(fLunchList);
+            }
+            if (event1.isControlDown() && event1.getClickCount() == 1) {
+                fLunchList.remove(friLunch.getSelectionModel().getSelectedItem());
+            }
+        });
+        
+        friDinner.setOnMouseClicked((MouseEvent event1) -> {
+            if (event1.getClickCount() == 2) {
+                fDinnerList.add(toCopyFood);
+                friDinner.setItems(fDinnerList);
+            }
+            if (event1.isControlDown() && event1.getClickCount() == 1) {
+                fDinnerList.remove(friDinner.getSelectionModel().getSelectedItem());
+            }
+        });
+        
+        satBreakfast.setOnMouseClicked((MouseEvent event1) -> {
+            if (event1.getClickCount() == 2) {
+                sBreakfastList.add(toCopyFood);
+                satBreakfast.setItems(sBreakfastList);
+            }
+            if (event1.isControlDown() && event1.getClickCount() == 1) {
+                sBreakfastList.remove(satBreakfast.getSelectionModel().getSelectedItem());
+            }
+        });
+        
+        satLunch.setOnMouseClicked((MouseEvent event1) -> {
+            if (event1.getClickCount() == 2) {
+                sLunchList.add(toCopyFood);
+                satLunch.setItems(sLunchList);
+            }
+            if (event1.isControlDown() && event1.getClickCount() == 1) {
+                sLunchList.remove(satLunch.getSelectionModel().getSelectedItem());
+            }
+        });
+        
+        satDinner.setOnMouseClicked((MouseEvent event1) -> {
+            if (event1.getClickCount() == 2) {
+                sDinnerList.add(toCopyFood);
+                satDinner.setItems(sDinnerList);
+            }
+            if (event1.isControlDown() && event1.getClickCount() == 1) {
+                sDinnerList.remove(satDinner.getSelectionModel().getSelectedItem());
+            }
+        });
+        
+        sunBreakfast.setOnMouseClicked((MouseEvent event1) -> {
+            if (event1.getClickCount() == 2) {
+                suBreakfastList.add(toCopyFood);
+                sunBreakfast.setItems(suBreakfastList);
+            }
+            if (event1.isControlDown() && event1.getClickCount() == 1) {
+                suBreakfastList.remove(sunBreakfast.getSelectionModel().getSelectedItem());
+            }
+        });
+        
+        sunLunch.setOnMouseClicked((MouseEvent event1) -> {
+            if (event1.getClickCount() == 2) {
+                suLunchList.add(toCopyFood);
+                sunLunch.setItems(suLunchList);
+            }
+            if (event1.isControlDown() && event1.getClickCount() == 1) {
+                suLunchList.remove(sunLunch.getSelectionModel().getSelectedItem());
+            }
+        });
+        
+        sunDinner.setOnMouseClicked((MouseEvent event1) -> {
+            if (event1.getClickCount() == 2) {
+                suDinnerList.add(toCopyFood);
+                sunDinner.setItems(suDinnerList);
+            }
+            if (event1.isControlDown() && event1.getClickCount() == 1) {
+                suDinnerList.remove(sunDinner.getSelectionModel().getSelectedItem());
             }
         });
     }
