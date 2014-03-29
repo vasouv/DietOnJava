@@ -5,6 +5,8 @@
         <group>
             <file>file:/C:/Users/vasouv/Documents/GitHub/DietOnJava/src/dietonjava/MainGUIController.java</file>
             <file>file:/C:/Users/vasouv/Documents/GitHub/DietOnJava/src/dietonjava/MainGUI.fxml</file>
+            <file>file:/C:/Users/vasouv/Documents/GitHub/DietOnJava/src/dietonjava/iomanager/MealLists.java</file>
+            <file>file:/C:/Users/vasouv/Documents/GitHub/DietOnJava/src/dietonjava/iomanager/DietSchedule.java</file>
         </group>
     </open-files>
 </project-private>
