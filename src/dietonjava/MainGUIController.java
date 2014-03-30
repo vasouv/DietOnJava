@@ -8,6 +8,8 @@ package dietonjava;
 import dietonjava.foodhandling.Food;
 import dietonjava.foodhandling.FoodSQL;
 import dietonjava.foodhandling.NutrientNames;
+import dietonjava.iomanager.DietSchedule;
+import dietonjava.iomanager.MealLists;
 import java.io.File;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -68,7 +70,7 @@ public class MainGUIController implements Initializable {
     private TableView<Food> sunBreakfast, sunLunch, sunDinner;
     
     @FXML
-    private Button openFile;
+    private Button openFile, saveFile;
 
     /**
      * The following variables hold each person's data
@@ -84,6 +86,9 @@ public class MainGUIController implements Initializable {
     
     @FXML
     private TextArea notesTextArea;
+    
+    DietSchedule schedule;
+    MealLists meals;
 
     /**
      * Temp food that is drag'n'dropped from the DB
@@ -347,6 +352,51 @@ public class MainGUIController implements Initializable {
 
         list = fsql.listFoods();
         foodDB.setItems(list);
+        
+        populateInfo();
+    }
+    
+    private void populateInfo() {
+        
+        nameText.setText("Vasilis");
+        surnameText.setText("Souvatzis");
+        addressText.setText("Kolasews 666");
+        telText.setText("123456789");
+        dateText.setText("30-3-2014");
+        kgText.setText("97");
+        ageText.setText("27");
+        heightText.setText("1.67");
+        notesTextArea.setText("These are some notes that are supposed to be included here about this specific client's diet");
+        
+        monBreakfastList.add(list.get(1));
+        monBreakfast.setItems(monBreakfastList);
+        monLunch.setItems(monBreakfastList);
+        monDinner.setItems(monBreakfastList);
+        
+        tueBreakfast.setItems(monBreakfastList);
+        tueLunch.setItems(monBreakfastList);
+        tueDinner.setItems(monBreakfastList);
+        
+        wedBreakfast.setItems(monBreakfastList);
+        wedLunch.setItems(monBreakfastList);
+        wedDinner.setItems(monBreakfastList);
+        
+        thBreakfast.setItems(monBreakfastList);
+        thLunch.setItems(monBreakfastList);
+        thDinner.setItems(monBreakfastList);
+        
+        friBreakfast.setItems(monBreakfastList);
+        friLunch.setItems(monBreakfastList);
+        friDinner.setItems(monBreakfastList);
+        
+        satBreakfast.setItems(monBreakfastList);
+        satLunch.setItems(monBreakfastList);
+        satDinner.setItems(monBreakfastList);
+        
+        sunBreakfast.setItems(monBreakfastList);
+        sunLunch.setItems(monBreakfastList);
+        sunDinner.setItems(monBreakfastList);
+        
     }
 
     /**
@@ -409,11 +459,27 @@ public class MainGUIController implements Initializable {
      * NOT FINISHED
      */
     @FXML
-    private void openExistingFile(MouseEvent event) {
+    private void openXMLFile(MouseEvent event) {
         openFile.setOnMouseClicked((MouseEvent e1) -> {
             FileChooser fChooser = new FileChooser();
             File file = fChooser.showOpenDialog(openFile.getScene().getWindow());
         });
+    }
+    
+    @FXML
+    private void saveToXMLFile(MouseEvent event) {
+        meals = new MealLists(monBreakfastList, monLunchList, monDinnerList,
+            tueBreakfastList, tueLunchList, tueDinnerList, 
+            wedBreakfastList, wedLunchList, wedDinnerList,
+            thBreakfastList, thLunchList, thDinnerList,
+            fBreakfastList, fLunchList, fDinnerList,
+            sBreakfastList, sLunchList, sDinnerList,
+            suBreakfastList, suLunchList, suDinnerList);
+        
+        schedule = new DietSchedule(nameText.getText(), surnameText.getText(), 
+                addressText.getText(), telText.getText(), dateText.getText(), 
+                kgText.getText(), ageText.getText(), heightText.getText(), 
+                notesTextArea.getText(), meals);
     }
 
     /**

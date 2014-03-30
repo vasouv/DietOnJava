@@ -387,8 +387,8 @@
             <HBox id="HBox" alignment="CENTER" prefWidth="422.0" spacing="15.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0">
               <children>
                 <Button onMouseClicked="#createNewProgram"  mnemonicParsing="false" text="New" />
-                <Button mnemonicParsing="false" text="Save" />
-                <Button fx:id="openFile" onMouseClicked="#openExistingFile" mnemonicParsing="false" text="Open" />
+                <Button fx:id="saveFile" onMouseClicked="#saveToXMLFile" mnemonicParsing="false" text="Save" />
+                <Button fx:id="openFile" onMouseClicked="#openXMLFile" mnemonicParsing="false" text="Open" />
                 <Button mnemonicParsing="false" text="Print" />
                 <Button mnemonicParsing="false" text="PDF" />
               </children>

@@ -6,7 +6,7 @@
 
 package dietonjava.iomanager;
 
-import java.util.LinkedList;
+import java.util.List;
 
 /**
  * This class holds the meal lists
@@ -15,175 +15,210 @@ import java.util.LinkedList;
  */
 public class MealLists {
     
-    private LinkedList mondayBr, mondayLu, mondayDi, tueBr, tueLu, tueDi;
-    private LinkedList wedBr, wedLu, wedDi, thuBr, thuLu, thuDi;
-    private LinkedList friBr, friLu, friDi, satBr, satLu, satDi, sunBr, sunLu, sunDi;
+    private List mondayBr, mondayLu, mondayDi, tueBr, tueLu, tueDi;
+    private List wedBr, wedLu, wedDi, thuBr, thuLu, thuDi;
+    private List friBr, friLu, friDi, satBr, satLu, satDi, sunBr, sunLu, sunDi;
 
-    public LinkedList getMondayBr() {
+    public MealLists(List mondayBr, List mondayLu, List mondayDi, 
+            List tueBr, List tueLu, List tueDi, List wedBr, 
+            List wedLu, List wedDi, List thuBr, List thuLu, 
+            List thuDi, List friBr, List friLu, List friDi, 
+            List satBr, List satLu, List satDi, List sunBr, 
+            List sunLu, List sunDi) {
+        this.mondayBr = mondayBr;
+        this.mondayLu = mondayLu;
+        this.mondayDi = mondayDi;
+        this.tueBr = tueBr;
+        this.tueLu = tueLu;
+        this.tueDi = tueDi;
+        this.wedBr = wedBr;
+        this.wedLu = wedLu;
+        this.wedDi = wedDi;
+        this.thuBr = thuBr;
+        this.thuLu = thuLu;
+        this.thuDi = thuDi;
+        this.friBr = friBr;
+        this.friLu = friLu;
+        this.friDi = friDi;
+        this.satBr = satBr;
+        this.satLu = satLu;
+        this.satDi = satDi;
+        this.sunBr = sunBr;
+        this.sunLu = sunLu;
+        this.sunDi = sunDi;
+    }
+    
+    public MealLists(List mon) {
+        mondayBr = mon;
+    }
+    
+    
+
+    public List getMondayBr() {
         return mondayBr;
     }
 
-    public void setMondayBr(LinkedList mondayBr) {
+    public void setMondayBr(List mondayBr) {
         this.mondayBr = mondayBr;
     }
 
-    public LinkedList getMondayLu() {
+    public List getMondayLu() {
         return mondayLu;
     }
 
-    public void setMondayLu(LinkedList mondayLu) {
+    public void setMondayLu(List mondayLu) {
         this.mondayLu = mondayLu;
     }
 
-    public LinkedList getMondayDi() {
+    public List getMondayDi() {
         return mondayDi;
     }
 
-    public void setMondayDi(LinkedList mondayDi) {
+    public void setMondayDi(List mondayDi) {
         this.mondayDi = mondayDi;
     }
 
-    public LinkedList getTueBr() {
+    public List getTueBr() {
         return tueBr;
     }
 
-    public void setTueBr(LinkedList tueBr) {
+    public void setTueBr(List tueBr) {
         this.tueBr = tueBr;
     }
 
-    public LinkedList getTueLu() {
+    public List getTueLu() {
         return tueLu;
     }
 
-    public void setTueLu(LinkedList tueLu) {
+    public void setTueLu(List tueLu) {
         this.tueLu = tueLu;
     }
 
-    public LinkedList getTueDi() {
+    public List getTueDi() {
         return tueDi;
     }
 
-    public void setTueDi(LinkedList tueDi) {
+    public void setTueDi(List tueDi) {
         this.tueDi = tueDi;
     }
 
-    public LinkedList getWedBr() {
+    public List getWedBr() {
         return wedBr;
     }
 
-    public void setWedBr(LinkedList wedBr) {
+    public void setWedBr(List wedBr) {
         this.wedBr = wedBr;
     }
 
-    public LinkedList getWedLu() {
+    public List getWedLu() {
         return wedLu;
     }
 
-    public void setWedLu(LinkedList wedLu) {
+    public void setWedLu(List wedLu) {
         this.wedLu = wedLu;
     }
 
-    public LinkedList getWedDi() {
+    public List getWedDi() {
         return wedDi;
     }
 
-    public void setWedDi(LinkedList wedDi) {
+    public void setWedDi(List wedDi) {
         this.wedDi = wedDi;
     }
 
-    public LinkedList getThuBr() {
+    public List getThuBr() {
         return thuBr;
     }
 
-    public void setThuBr(LinkedList thuBr) {
+    public void setThuBr(List thuBr) {
         this.thuBr = thuBr;
     }
 
-    public LinkedList getThuLu() {
+    public List getThuLu() {
         return thuLu;
     }
 
-    public void setThuLu(LinkedList thuLu) {
+    public void setThuLu(List thuLu) {
         this.thuLu = thuLu;
     }
 
-    public LinkedList getThuDi() {
+    public List getThuDi() {
         return thuDi;
     }
 
-    public void setThuDi(LinkedList thuDi) {
+    public void setThuDi(List thuDi) {
         this.thuDi = thuDi;
     }
 
-    public LinkedList getFriBr() {
+    public List getFriBr() {
         return friBr;
     }
 
-    public void setFriBr(LinkedList friBr) {
+    public void setFriBr(List friBr) {
         this.friBr = friBr;
     }
 
-    public LinkedList getFriLu() {
+    public List getFriLu() {
         return friLu;
     }
 
-    public void setFriLu(LinkedList friLu) {
+    public void setFriLu(List friLu) {
         this.friLu = friLu;
     }
 
-    public LinkedList getFriDi() {
+    public List getFriDi() {
         return friDi;
     }
 
-    public void setFriDi(LinkedList friDi) {
+    public void setFriDi(List friDi) {
         this.friDi = friDi;
     }
 
-    public LinkedList getSatBr() {
+    public List getSatBr() {
         return satBr;
     }
 
-    public void setSatBr(LinkedList satBr) {
+    public void setSatBr(List satBr) {
         this.satBr = satBr;
     }
 
-    public LinkedList getSatLu() {
+    public List getSatLu() {
         return satLu;
     }
 
-    public void setSatLu(LinkedList satLu) {
+    public void setSatLu(List satLu) {
         this.satLu = satLu;
     }
 
-    public LinkedList getSatDi() {
+    public List getSatDi() {
         return satDi;
     }
 
-    public void setSatDi(LinkedList satDi) {
+    public void setSatDi(List satDi) {
         this.satDi = satDi;
     }
 
-    public LinkedList getSunBr() {
+    public List getSunBr() {
         return sunBr;
     }
 
-    public void setSunBr(LinkedList sunBr) {
+    public void setSunBr(List sunBr) {
         this.sunBr = sunBr;
     }
 
-    public LinkedList getSunLu() {
+    public List getSunLu() {
         return sunLu;
     }
 
-    public void setSunLu(LinkedList sunLu) {
+    public void setSunLu(List sunLu) {
         this.sunLu = sunLu;
     }
 
-    public LinkedList getSunDi() {
+    public List getSunDi() {
         return sunDi;
     }
 
-    public void setSunDi(LinkedList sunDi) {
+    public void setSunDi(List sunDi) {
         this.sunDi = sunDi;
     }
     

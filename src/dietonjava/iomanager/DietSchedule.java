@@ -14,12 +14,22 @@ package dietonjava.iomanager;
  */
 public class DietSchedule {
     
-    private String name, surname, address, telephone;
-    private double kg;
-    private int age;
-    private double height;
-    private String date, notes;
+    private String name, surname, address, telephone, date, kg, age, height, notes;
     private MealLists mealLists;
+
+    public DietSchedule(String name, String surname, String address, String telephone, 
+            String date, String kg, String age, String height, String notes, MealLists mealLists) {
+        this.name = name;
+        this.surname = surname;
+        this.address = address;
+        this.telephone = telephone;
+        this.date = date;
+        this.kg = kg;
+        this.age = age;
+        this.height = height;
+        this.notes = notes;
+        this.mealLists = mealLists;
+    }
 
     public String getName() {
         return name;
@@ -53,36 +63,36 @@ public class DietSchedule {
         this.telephone = telephone;
     }
 
-    public double getKg() {
-        return kg;
-    }
-
-    public void setKg(double kg) {
-        this.kg = kg;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public double getHeight() {
-        return height;
-    }
-
-    public void setHeight(double height) {
-        this.height = height;
-    }
-
     public String getDate() {
         return date;
     }
 
     public void setDate(String date) {
         this.date = date;
+    }
+
+    public String getKg() {
+        return kg;
+    }
+
+    public void setKg(String kg) {
+        this.kg = kg;
+    }
+
+    public String getAge() {
+        return age;
+    }
+
+    public void setAge(String age) {
+        this.age = age;
+    }
+
+    public String getHeight() {
+        return height;
+    }
+
+    public void setHeight(String height) {
+        this.height = height;
     }
 
     public String getNotes() {
@@ -100,6 +110,6 @@ public class DietSchedule {
     public void setMealLists(MealLists mealLists) {
         this.mealLists = mealLists;
     }
-    
+
     
 }
