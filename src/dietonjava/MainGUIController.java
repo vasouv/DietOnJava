@@ -5,12 +5,16 @@
  */
 package dietonjava;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import dietonjava.foodhandling.Food;
 import dietonjava.foodhandling.FoodSQL;
 import dietonjava.foodhandling.NutrientNames;
 import dietonjava.iomanager.DietSchedule;
+import dietonjava.iomanager.FileHandling;
 import dietonjava.iomanager.MealLists;
 import java.io.File;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import static javafx.collections.FXCollections.observableArrayList;
@@ -89,6 +93,10 @@ public class MainGUIController implements Initializable {
     
     DietSchedule schedule;
     MealLists meals;
+    
+    Gson gson = new GsonBuilder().setPrettyPrinting().create();
+    
+    FileHandling fileIO = new FileHandling();
 
     /**
      * Temp food that is drag'n'dropped from the DB
@@ -360,42 +368,62 @@ public class MainGUIController implements Initializable {
         
         nameText.setText("Vasilis");
         surnameText.setText("Souvatzis");
-        addressText.setText("Kolasews 666");
+        addressText.setText("Pera dw8e");
         telText.setText("123456789");
         dateText.setText("30-3-2014");
         kgText.setText("97");
         ageText.setText("27");
-        heightText.setText("1.67");
+        heightText.setText("1.76");
         notesTextArea.setText("These are some notes that are supposed to be included here about this specific client's diet");
         
         monBreakfastList.add(list.get(1));
         monBreakfast.setItems(monBreakfastList);
-        monLunch.setItems(monBreakfastList);
-        monDinner.setItems(monBreakfastList);
+        monLunchList.add(list.get(2));
+        monLunch.setItems(monLunchList);
+        monDinnerList.add(list.get(3));
+        monDinner.setItems(monDinnerList);
         
-        tueBreakfast.setItems(monBreakfastList);
-        tueLunch.setItems(monBreakfastList);
-        tueDinner.setItems(monBreakfastList);
+        tueBreakfastList.add(list.get(4));
+        tueBreakfast.setItems(tueBreakfastList);
+        tueLunchList.add(list.get(5));
+        tueLunch.setItems(tueLunchList);
+        tueDinnerList.add(list.get(6));
+        tueDinner.setItems(tueDinnerList);
         
-        wedBreakfast.setItems(monBreakfastList);
-        wedLunch.setItems(monBreakfastList);
-        wedDinner.setItems(monBreakfastList);
+        wedBreakfastList.add(list.get(7));
+        wedBreakfast.setItems(wedBreakfastList);
+        wedLunchList.add(list.get(8));
+        wedLunch.setItems(wedLunchList);
+        wedDinnerList.add(list.get(9));
+        wedDinner.setItems(wedDinnerList);
         
-        thBreakfast.setItems(monBreakfastList);
-        thLunch.setItems(monBreakfastList);
-        thDinner.setItems(monBreakfastList);
+        thBreakfastList.add(list.get(10));
+        thBreakfast.setItems(thBreakfastList);
+        thLunchList.add(list.get(11));
+        thLunch.setItems(thLunchList);
+        thDinnerList.add(list.get(12));
+        thDinner.setItems(thDinnerList);
         
-        friBreakfast.setItems(monBreakfastList);
-        friLunch.setItems(monBreakfastList);
-        friDinner.setItems(monBreakfastList);
+        fBreakfastList.add(list.get(13));
+        friBreakfast.setItems(fBreakfastList);
+        fLunchList.add(list.get(14));
+        friLunch.setItems(fLunchList);
+        fDinnerList.add(list.get(15));
+        friDinner.setItems(fDinnerList);
         
-        satBreakfast.setItems(monBreakfastList);
-        satLunch.setItems(monBreakfastList);
-        satDinner.setItems(monBreakfastList);
+        sBreakfastList.add(list.get(16));
+        satBreakfast.setItems(sBreakfastList);
+        sLunchList.add(list.get(17));
+        satLunch.setItems(sLunchList);
+        sDinnerList.add(list.get(18));
+        satDinner.setItems(sDinnerList);
         
-        sunBreakfast.setItems(monBreakfastList);
-        sunLunch.setItems(monBreakfastList);
-        sunDinner.setItems(monBreakfastList);
+        suBreakfastList.add(list.get(19));
+        sunBreakfast.setItems(suBreakfastList);
+        suLunchList.add(list.get(20));
+        sunLunch.setItems(suLunchList);
+        suDinnerList.add(list.get(21));
+        sunDinner.setItems(suDinnerList);
         
     }
 
@@ -459,7 +487,7 @@ public class MainGUIController implements Initializable {
      * NOT FINISHED
      */
     @FXML
-    private void openXMLFile(MouseEvent event) {
+    private void openJSONFile(MouseEvent event) {
         openFile.setOnMouseClicked((MouseEvent e1) -> {
             FileChooser fChooser = new FileChooser();
             File file = fChooser.showOpenDialog(openFile.getScene().getWindow());
@@ -467,7 +495,7 @@ public class MainGUIController implements Initializable {
     }
     
     @FXML
-    private void saveToXMLFile(MouseEvent event) {
+    private void saveJSONFile(MouseEvent event) throws IOException {
         meals = new MealLists(monBreakfastList, monLunchList, monDinnerList,
             tueBreakfastList, tueLunchList, tueDinnerList, 
             wedBreakfastList, wedLunchList, wedDinnerList,
@@ -480,6 +508,10 @@ public class MainGUIController implements Initializable {
                 addressText.getText(), telText.getText(), dateText.getText(), 
                 kgText.getText(), ageText.getText(), heightText.getText(), 
                 notesTextArea.getText(), meals);
+        
+        String firstJSON = gson.toJson(schedule, DietSchedule.class);
+        
+        fileIO.writeJSONFile(firstJSON, "test.json");
     }
 
     /**
