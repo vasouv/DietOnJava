@@ -64,7 +64,7 @@ public class MainGUIController implements Initializable {
     private TableView<Food> wedBreakfast, wedLunch, wedDinner;
     
     @FXML
-    private TableView<Food> thBreakfast, thLunch, thDinner;
+    private TableView<Food> thuBreakfast, thuLunch, thuDinner;
     
     @FXML
     private TableView<Food> friBreakfast, friLunch, friDinner;
@@ -120,21 +120,21 @@ public class MainGUIController implements Initializable {
     ObservableList<Food> wedLunchList = observableArrayList();
     ObservableList<Food> wedDinnerList = observableArrayList();
     
-    ObservableList<Food> thBreakfastList = observableArrayList();
-    ObservableList<Food> thLunchList = observableArrayList();
-    ObservableList<Food> thDinnerList = observableArrayList();
+    ObservableList<Food> thuBreakfastList = observableArrayList();
+    ObservableList<Food> thuLunchList = observableArrayList();
+    ObservableList<Food> thuDinnerList = observableArrayList();
     
-    ObservableList<Food> fBreakfastList = observableArrayList();
-    ObservableList<Food> fLunchList = observableArrayList();
-    ObservableList<Food> fDinnerList = observableArrayList();
+    ObservableList<Food> friBreakfastList = observableArrayList();
+    ObservableList<Food> friLunchList = observableArrayList();
+    ObservableList<Food> friDinnerList = observableArrayList();
     
-    ObservableList<Food> sBreakfastList = observableArrayList();
-    ObservableList<Food> sLunchList = observableArrayList();
-    ObservableList<Food> sDinnerList = observableArrayList();
+    ObservableList<Food> satBreakfastList = observableArrayList();
+    ObservableList<Food> satLunchList = observableArrayList();
+    ObservableList<Food> satDinnerList = observableArrayList();
     
-    ObservableList<Food> suBreakfastList = observableArrayList();
-    ObservableList<Food> suLunchList = observableArrayList();
-    ObservableList<Food> suDinnerList = observableArrayList();
+    ObservableList<Food> sunBreakfastList = observableArrayList();
+    ObservableList<Food> sunLunchList = observableArrayList();
+    ObservableList<Food> sunDinnerList = observableArrayList();
 
     /**
      * TableColumns for the DB
@@ -366,6 +366,9 @@ public class MainGUIController implements Initializable {
         populateInfo();
     }
     
+    /**
+     * Temporary data to populate the TableViews while testing
+     */
     private void populateInfo() {
         
         nameText.setText("Xristos");
@@ -399,33 +402,33 @@ public class MainGUIController implements Initializable {
         wedDinnerList.add(list.get(9));
         wedDinner.setItems(wedDinnerList);
         
-        thBreakfastList.add(list.get(10));
-        thBreakfast.setItems(thBreakfastList);
-        thLunchList.add(list.get(11));
-        thLunch.setItems(thLunchList);
-        thDinnerList.add(list.get(12));
-        thDinner.setItems(thDinnerList);
+        thuBreakfastList.add(list.get(10));
+        thuBreakfast.setItems(thuBreakfastList);
+        thuLunchList.add(list.get(11));
+        thuLunch.setItems(thuLunchList);
+        thuDinnerList.add(list.get(12));
+        thuDinner.setItems(thuDinnerList);
         
-        fBreakfastList.add(list.get(13));
-        friBreakfast.setItems(fBreakfastList);
-        fLunchList.add(list.get(14));
-        friLunch.setItems(fLunchList);
-        fDinnerList.add(list.get(15));
-        friDinner.setItems(fDinnerList);
+        friBreakfastList.add(list.get(13));
+        friBreakfast.setItems(friBreakfastList);
+        friLunchList.add(list.get(14));
+        friLunch.setItems(friLunchList);
+        friDinnerList.add(list.get(15));
+        friDinner.setItems(friDinnerList);
         
-        sBreakfastList.add(list.get(16));
-        satBreakfast.setItems(sBreakfastList);
-        sLunchList.add(list.get(17));
-        satLunch.setItems(sLunchList);
-        sDinnerList.add(list.get(18));
-        satDinner.setItems(sDinnerList);
+        satBreakfastList.add(list.get(16));
+        satBreakfast.setItems(satBreakfastList);
+        satLunchList.add(list.get(17));
+        satLunch.setItems(satLunchList);
+        satDinnerList.add(list.get(18));
+        satDinner.setItems(satDinnerList);
         
-        suBreakfastList.add(list.get(19));
-        sunBreakfast.setItems(suBreakfastList);
-        suLunchList.add(list.get(20));
-        sunLunch.setItems(suLunchList);
-        suDinnerList.add(list.get(21));
-        sunDinner.setItems(suDinnerList);
+        sunBreakfastList.add(list.get(19));
+        sunBreakfast.setItems(sunBreakfastList);
+        sunLunchList.add(list.get(20));
+        sunLunch.setItems(sunLunchList);
+        sunDinnerList.add(list.get(21));
+        sunDinner.setItems(sunDinnerList);
         
     }
 
@@ -468,21 +471,21 @@ public class MainGUIController implements Initializable {
         wedLunchList.clear();
         wedDinnerList.clear();
         
-        thBreakfastList.clear();
-        thLunchList.clear();
-        thDinnerList.clear();
+        thuBreakfastList.clear();
+        thuLunchList.clear();
+        thuDinnerList.clear();
         
-        fBreakfastList.clear();
-        fLunchList.clear();
-        fDinnerList.clear();
+        friBreakfastList.clear();
+        friLunchList.clear();
+        friDinnerList.clear();
         
-        sBreakfastList.clear();
-        sLunchList.clear();
-        sDinnerList.clear();
+        satBreakfastList.clear();
+        satLunchList.clear();
+        satDinnerList.clear();
         
-        suBreakfastList.clear();
-        suLunchList.clear();
-        suDinnerList.clear();
+        sunBreakfastList.clear();
+        sunLunchList.clear();
+        sunDinnerList.clear();
     }
     
     /**
@@ -504,6 +507,7 @@ public class MainGUIController implements Initializable {
         });
     }
     
+    //TABLEVIEWS DO NOT SHOW THE DATA!!!
     private void replaceFields(DietSchedule ds){
         nameText.setText(ds.getName());
         surnameText.setText(ds.getSurname());
@@ -528,6 +532,42 @@ public class MainGUIController implements Initializable {
         tueLunch.setItems(tueLunchList);
         tueDinnerList.setAll(ds.getMealLists().getTueDi());
         tueDinner.setItems(tueDinnerList);
+        
+        wedBreakfastList.setAll(ds.getMealLists().getWedBr());
+        wedBreakfast.setItems(wedBreakfastList);
+        wedLunchList.setAll(ds.getMealLists().getWedLu());
+        wedLunch.setItems(wedLunchList);
+        wedDinnerList.setAll(ds.getMealLists().getWedDi());
+        wedDinner.setItems(wedDinnerList);
+        
+        thuBreakfastList.setAll(ds.getMealLists().getThuBr());
+        thuBreakfast.setItems(thuBreakfastList);
+        thuLunchList.setAll(ds.getMealLists().getThuBr());
+        thuLunch.setItems(thuLunchList);
+        thuDinnerList.setAll(ds.getMealLists().getThuDi());
+        thuDinner.setItems(thuDinnerList);
+        
+        friBreakfastList.setAll(ds.getMealLists().getFriBr());
+        friBreakfast.setItems(friBreakfastList);
+        friLunchList.setAll(ds.getMealLists().getFriLu());
+        friLunch.setItems(friLunchList);
+        friDinnerList.setAll(ds.getMealLists().getFriDi());
+        friDinner.setItems(friDinnerList);
+        
+        satBreakfastList.setAll(ds.getMealLists().getSatBr());
+        satBreakfast.setItems(satBreakfastList);
+        satLunchList.setAll(ds.getMealLists().getSatLu());
+        satLunch.setItems(satBreakfastList);
+        satDinnerList.setAll(ds.getMealLists().getSatDi());
+        satDinner.setItems(satDinnerList);
+        
+        sunBreakfastList.setAll(ds.getMealLists().getSunBr());
+        sunBreakfast.setItems(sunBreakfastList);
+        sunLunchList.setAll(ds.getMealLists().getSunLu());
+        sunLunch.setItems(sunLunchList);
+        sunDinnerList.setAll(ds.getMealLists().getSunDi());
+        sunDinner.setItems(sunDinnerList);
+        
     }
     
     @FXML
@@ -535,10 +575,10 @@ public class MainGUIController implements Initializable {
         meals = new MealLists(monBreakfastList, monLunchList, monDinnerList,
             tueBreakfastList, tueLunchList, tueDinnerList, 
             wedBreakfastList, wedLunchList, wedDinnerList,
-            thBreakfastList, thLunchList, thDinnerList,
-            fBreakfastList, fLunchList, fDinnerList,
-            sBreakfastList, sLunchList, sDinnerList,
-            suBreakfastList, suLunchList, suDinnerList);
+            thuBreakfastList, thuLunchList, thuDinnerList,
+            friBreakfastList, friLunchList, friDinnerList,
+            satBreakfastList, satLunchList, satDinnerList,
+            sunBreakfastList, sunLunchList, sunDinnerList);
         
         schedule = new DietSchedule(nameText.getText(), surnameText.getText(), 
                 addressText.getText(), telText.getText(), dateText.getText(), 
@@ -659,123 +699,123 @@ public class MainGUIController implements Initializable {
             }
         });
         
-        thBreakfast.setOnMouseClicked((MouseEvent event1) -> {
+        thuBreakfast.setOnMouseClicked((MouseEvent event1) -> {
             if (event1.getClickCount() == 2) {
-                thBreakfastList.add(toCopyFood);
-                thBreakfast.setItems(thBreakfastList);
+                thuBreakfastList.add(toCopyFood);
+                thuBreakfast.setItems(thuBreakfastList);
             }
             if (event1.isControlDown() && event1.getClickCount() == 1) {
-                thBreakfastList.remove(thBreakfast.getSelectionModel().getSelectedItem());
+                thuBreakfastList.remove(thuBreakfast.getSelectionModel().getSelectedItem());
             }
         });
         
-        thLunch.setOnMouseClicked((MouseEvent event1) -> {
+        thuLunch.setOnMouseClicked((MouseEvent event1) -> {
             if (event1.getClickCount() == 2) {
-                thLunchList.add(toCopyFood);
-                thLunch.setItems(thLunchList);
+                thuLunchList.add(toCopyFood);
+                thuLunch.setItems(thuLunchList);
             }
             if (event1.isControlDown() && event1.getClickCount() == 1) {
-                thLunchList.remove(thLunch.getSelectionModel().getSelectedItem());
+                thuLunchList.remove(thuLunch.getSelectionModel().getSelectedItem());
             }
         });
         
-        thDinner.setOnMouseClicked((MouseEvent event1) -> {
+        thuDinner.setOnMouseClicked((MouseEvent event1) -> {
             if (event1.getClickCount() == 2) {
-                thDinnerList.add(toCopyFood);
-                thDinner.setItems(thDinnerList);
+                thuDinnerList.add(toCopyFood);
+                thuDinner.setItems(thuDinnerList);
             }
             if (event1.isControlDown() && event1.getClickCount() == 1) {
-                thDinnerList.remove(thDinner.getSelectionModel().getSelectedItem());
+                thuDinnerList.remove(thuDinner.getSelectionModel().getSelectedItem());
             }
         });
         
         friBreakfast.setOnMouseClicked((MouseEvent event1) -> {
             if (event1.getClickCount() == 2) {
-                fBreakfastList.add(toCopyFood);
-                friBreakfast.setItems(fBreakfastList);
+                friBreakfastList.add(toCopyFood);
+                friBreakfast.setItems(friBreakfastList);
             }
             if (event1.isControlDown() && event1.getClickCount() == 1) {
-                fBreakfastList.remove(friBreakfast.getSelectionModel().getSelectedItem());
+                friBreakfastList.remove(friBreakfast.getSelectionModel().getSelectedItem());
             }
         });
         
         friLunch.setOnMouseClicked((MouseEvent event1) -> {
             if (event1.getClickCount() == 2) {
-                fLunchList.add(toCopyFood);
-                friLunch.setItems(fLunchList);
+                friLunchList.add(toCopyFood);
+                friLunch.setItems(friLunchList);
             }
             if (event1.isControlDown() && event1.getClickCount() == 1) {
-                fLunchList.remove(friLunch.getSelectionModel().getSelectedItem());
+                friLunchList.remove(friLunch.getSelectionModel().getSelectedItem());
             }
         });
         
         friDinner.setOnMouseClicked((MouseEvent event1) -> {
             if (event1.getClickCount() == 2) {
-                fDinnerList.add(toCopyFood);
-                friDinner.setItems(fDinnerList);
+                friDinnerList.add(toCopyFood);
+                friDinner.setItems(friDinnerList);
             }
             if (event1.isControlDown() && event1.getClickCount() == 1) {
-                fDinnerList.remove(friDinner.getSelectionModel().getSelectedItem());
+                friDinnerList.remove(friDinner.getSelectionModel().getSelectedItem());
             }
         });
         
         satBreakfast.setOnMouseClicked((MouseEvent event1) -> {
             if (event1.getClickCount() == 2) {
-                sBreakfastList.add(toCopyFood);
-                satBreakfast.setItems(sBreakfastList);
+                satBreakfastList.add(toCopyFood);
+                satBreakfast.setItems(satBreakfastList);
             }
             if (event1.isControlDown() && event1.getClickCount() == 1) {
-                sBreakfastList.remove(satBreakfast.getSelectionModel().getSelectedItem());
+                satBreakfastList.remove(satBreakfast.getSelectionModel().getSelectedItem());
             }
         });
         
         satLunch.setOnMouseClicked((MouseEvent event1) -> {
             if (event1.getClickCount() == 2) {
-                sLunchList.add(toCopyFood);
-                satLunch.setItems(sLunchList);
+                satLunchList.add(toCopyFood);
+                satLunch.setItems(satLunchList);
             }
             if (event1.isControlDown() && event1.getClickCount() == 1) {
-                sLunchList.remove(satLunch.getSelectionModel().getSelectedItem());
+                satLunchList.remove(satLunch.getSelectionModel().getSelectedItem());
             }
         });
         
         satDinner.setOnMouseClicked((MouseEvent event1) -> {
             if (event1.getClickCount() == 2) {
-                sDinnerList.add(toCopyFood);
-                satDinner.setItems(sDinnerList);
+                satDinnerList.add(toCopyFood);
+                satDinner.setItems(satDinnerList);
             }
             if (event1.isControlDown() && event1.getClickCount() == 1) {
-                sDinnerList.remove(satDinner.getSelectionModel().getSelectedItem());
+                satDinnerList.remove(satDinner.getSelectionModel().getSelectedItem());
             }
         });
         
         sunBreakfast.setOnMouseClicked((MouseEvent event1) -> {
             if (event1.getClickCount() == 2) {
-                suBreakfastList.add(toCopyFood);
-                sunBreakfast.setItems(suBreakfastList);
+                sunBreakfastList.add(toCopyFood);
+                sunBreakfast.setItems(sunBreakfastList);
             }
             if (event1.isControlDown() && event1.getClickCount() == 1) {
-                suBreakfastList.remove(sunBreakfast.getSelectionModel().getSelectedItem());
+                sunBreakfastList.remove(sunBreakfast.getSelectionModel().getSelectedItem());
             }
         });
         
         sunLunch.setOnMouseClicked((MouseEvent event1) -> {
             if (event1.getClickCount() == 2) {
-                suLunchList.add(toCopyFood);
-                sunLunch.setItems(suLunchList);
+                sunLunchList.add(toCopyFood);
+                sunLunch.setItems(sunLunchList);
             }
             if (event1.isControlDown() && event1.getClickCount() == 1) {
-                suLunchList.remove(sunLunch.getSelectionModel().getSelectedItem());
+                sunLunchList.remove(sunLunch.getSelectionModel().getSelectedItem());
             }
         });
         
         sunDinner.setOnMouseClicked((MouseEvent event1) -> {
             if (event1.getClickCount() == 2) {
-                suDinnerList.add(toCopyFood);
-                sunDinner.setItems(suDinnerList);
+                sunDinnerList.add(toCopyFood);
+                sunDinner.setItems(sunDinnerList);
             }
             if (event1.isControlDown() && event1.getClickCount() == 1) {
-                suDinnerList.remove(sunDinner.getSelectionModel().getSelectedItem());
+                sunDinnerList.remove(sunDinner.getSelectionModel().getSelectedItem());
             }
         });
     }

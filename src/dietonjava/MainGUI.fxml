@@ -178,7 +178,7 @@
                           <content>
                             <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="1207.0" prefWidth="566.0">
                               <children>
-                                <TableView fx:id="thBreakfast" onMouseClicked="#addRemoveFood" prefHeight="227.0" prefWidth="566.0" AnchorPane.bottomAnchor="981.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="-1.0">
+                                <TableView fx:id="thuBreakfast" onMouseClicked="#addRemoveFood" prefHeight="227.0" prefWidth="566.0" AnchorPane.bottomAnchor="981.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="-1.0">
                                   <columns>
                                     <TableColumn fx:id="ndb_noThBr" prefWidth="75.0" text="NDB" />
                                     <TableColumn fx:id="shrt_descThBr" prefWidth="75.0" text="Description" />
@@ -190,7 +190,7 @@
                                     <TableColumn fx:id="iron_mgThBr" prefWidth="75.0" text="Iron" />
                                   </columns>
                                 </TableView>
-                                <TableView fx:id="thLunch" onMouseClicked="#addRemoveFood" prefHeight="200.0" prefWidth="551.0" AnchorPane.bottomAnchor="675.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="332.0">
+                                <TableView fx:id="thuLunch" onMouseClicked="#addRemoveFood" prefHeight="200.0" prefWidth="551.0" AnchorPane.bottomAnchor="675.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="332.0">
                                   <columns>
                                     <TableColumn fx:id="ndb_noThL" prefWidth="75.0" text="NDB" />
                                     <TableColumn fx:id="shrt_descThL" prefWidth="75.0" text="Description" />
@@ -202,7 +202,7 @@
                                     <TableColumn fx:id="iron_mgThL" prefWidth="75.0" text="Iron" />
                                   </columns>
                                 </TableView>
-                                <TableView fx:id="thDinner" onMouseClicked="#addRemoveFood" prefHeight="105.0" prefWidth="551.0" AnchorPane.bottomAnchor="570.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="532.0">
+                                <TableView fx:id="thuDinner" onMouseClicked="#addRemoveFood" prefHeight="105.0" prefWidth="551.0" AnchorPane.bottomAnchor="570.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="532.0">
                                   <columns>
                                     <TableColumn fx:id="ndb_noThD" prefWidth="75.0" text="NDB" />
                                     <TableColumn fx:id="shrt_descThD" prefWidth="75.0" text="Description" />

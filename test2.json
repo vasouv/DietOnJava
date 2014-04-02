@@ -65,6 +65,16 @@
         "carbohydrt_g": 2.0,
         "fiber_td_g": 0.0,
         "iron_mg": 0.0
+      },
+	  {
+        "ndb_no": "21214",
+        "shrt_desc": "tuna crap",
+        "energ_kcal": 666.0,
+        "protein_g": 666.0,
+        "lipid_tot_g": 666.0,
+        "carbohydrt_g": 666.0,
+        "fiber_td_g": 666.0,
+        "iron_mg": 666.0
       }
     ],
     "tueLu": [
