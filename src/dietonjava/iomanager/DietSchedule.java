@@ -111,5 +111,8 @@ public class DietSchedule {
         this.mealLists = mealLists;
     }
 
-    
+    @Override
+    public String toString() {
+        return getName() + " " + getSurname();
+    }
 }

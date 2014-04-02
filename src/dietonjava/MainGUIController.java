@@ -17,6 +17,8 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import static javafx.collections.FXCollections.observableArrayList;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -366,14 +368,14 @@ public class MainGUIController implements Initializable {
     
     private void populateInfo() {
         
-        nameText.setText("Vasilis");
-        surnameText.setText("Souvatzis");
+        nameText.setText("Xristos");
+        surnameText.setText("Laukas");
         addressText.setText("Pera dw8e");
         telText.setText("123456789");
         dateText.setText("30-3-2014");
-        kgText.setText("97");
+        kgText.setText("120");
         ageText.setText("27");
-        heightText.setText("1.76");
+        heightText.setText("1.80");
         notesTextArea.setText("These are some notes that are supposed to be included here about this specific client's diet");
         
         monBreakfastList.add(list.get(1));
@@ -491,7 +493,41 @@ public class MainGUIController implements Initializable {
         openFile.setOnMouseClicked((MouseEvent e1) -> {
             FileChooser fChooser = new FileChooser();
             File file = fChooser.showOpenDialog(openFile.getScene().getWindow());
+            try {
+//                System.out.println(fileIO.readJSONFile(file.getPath()));
+                String jsonContents = fileIO.readJSONFile(file.getPath());
+                schedule = gson.fromJson(jsonContents, DietSchedule.class);
+                replaceFields(schedule);
+            } catch (IOException ex) {
+                Logger.getLogger(MainGUIController.class.getName()).log(Level.SEVERE, null, ex);
+            }
         });
+    }
+    
+    private void replaceFields(DietSchedule ds){
+        nameText.setText(ds.getName());
+        surnameText.setText(ds.getSurname());
+        addressText.setText(ds.getAddress());
+        telText.setText(ds.getTelephone());
+        dateText.setText(ds.getDate());
+        kgText.setText(ds.getKg());
+        ageText.setText(ds.getAge());
+        heightText.setText(ds.getHeight());
+        notesTextArea.setText(ds.getNotes());
+        
+        monBreakfastList.setAll(ds.getMealLists().getMondayBr());
+        monBreakfast.setItems(monBreakfastList);
+        monLunchList.setAll(ds.getMealLists().getMondayLu());
+        monLunch.setItems(monLunchList);
+        monDinnerList.setAll(ds.getMealLists().getMondayDi());
+        monDinner.setItems(monDinnerList);
+        
+        tueBreakfastList.setAll(ds.getMealLists().getTueBr());
+        tueBreakfast.setItems(tueBreakfastList);
+        tueLunchList.setAll(ds.getMealLists().getTueLu());
+        tueLunch.setItems(tueLunchList);
+        tueDinnerList.setAll(ds.getMealLists().getTueDi());
+        tueDinner.setItems(tueDinnerList);
     }
     
     @FXML

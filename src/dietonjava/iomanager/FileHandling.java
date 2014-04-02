@@ -6,7 +6,10 @@
 
 package dietonjava.iomanager;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
@@ -24,8 +27,14 @@ public class FileHandling {
         fileWriter.close();
     }
     
-    public String readJSONFile(String filename) {
-        return null;
+    public String readJSONFile(String filename) throws FileNotFoundException, IOException {
+        StringBuilder willBeReturned = new StringBuilder();
+        BufferedReader fileReader = new BufferedReader(new FileReader(filename));
+        String currentLine;
+        while((currentLine = fileReader.readLine()) != null) {
+            willBeReturned.append(currentLine);
+        }
+        return willBeReturned.toString().trim();
     }
     
 }
