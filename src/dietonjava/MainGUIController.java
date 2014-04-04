@@ -96,7 +96,8 @@ public class MainGUIController implements Initializable {
     DietSchedule schedule;
     MealLists meals;
     
-    Gson gson = new GsonBuilder().setPrettyPrinting().create();
+//    Gson gson = new GsonBuilder().setPrettyPrinting().create();
+    Gson gson = new Gson();
     
     FileHandling fileIO = new FileHandling();
 
@@ -488,9 +489,6 @@ public class MainGUIController implements Initializable {
         sunDinnerList.clear();
     }
     
-    /**
-     * NOT FINISHED
-     */
     @FXML
     private void openJSONFile(MouseEvent event) {
         openFile.setOnMouseClicked((MouseEvent e1) -> {
@@ -507,7 +505,6 @@ public class MainGUIController implements Initializable {
         });
     }
     
-    //TABLEVIEWS DO NOT SHOW THE DATA!!!
     private void replaceFields(DietSchedule ds){
         nameText.setText(ds.getName());
         surnameText.setText(ds.getSurname());

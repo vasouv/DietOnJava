@@ -6,6 +6,7 @@
 
 package dietonjava.iomanager;
 
+import dietonjava.foodhandling.Food;
 import java.util.List;
 
 /**
@@ -15,16 +16,17 @@ import java.util.List;
  */
 public class MealLists {
     
-    private List mondayBr, mondayLu, mondayDi, tueBr, tueLu, tueDi;
-    private List wedBr, wedLu, wedDi, thuBr, thuLu, thuDi;
-    private List friBr, friLu, friDi, satBr, satLu, satDi, sunBr, sunLu, sunDi;
+    private List<Food> mondayBr, mondayLu, mondayDi, tueBr, tueLu, tueDi;
+    private List<Food> wedBr, wedLu, wedDi, thuBr, thuLu, thuDi;
+    private List<Food> friBr, friLu, friDi, satBr, satLu, satDi, sunBr, sunLu, sunDi;
 
-    public MealLists(List mondayBr, List mondayLu, List mondayDi, 
-            List tueBr, List tueLu, List tueDi, List wedBr, 
-            List wedLu, List wedDi, List thuBr, List thuLu, 
-            List thuDi, List friBr, List friLu, List friDi, 
-            List satBr, List satLu, List satDi, List sunBr, 
-            List sunLu, List sunDi) {
+    public MealLists(List<Food> mondayBr, List<Food> mondayLu, List<Food> mondayDi, 
+            List<Food> tueBr, List<Food> tueLu, List<Food> tueDi, 
+            List<Food> wedBr, List<Food> wedLu, List<Food> wedDi, 
+            List<Food> thuBr, List<Food> thuLu, List<Food> thuDi, 
+            List<Food> friBr, List<Food> friLu, List<Food> friDi, 
+            List<Food> satBr, List<Food> satLu, List<Food> satDi, 
+            List<Food> sunBr, List<Food> sunLu, List<Food> sunDi) {
         this.mondayBr = mondayBr;
         this.mondayLu = mondayLu;
         this.mondayDi = mondayDi;
@@ -47,179 +49,175 @@ public class MealLists {
         this.sunLu = sunLu;
         this.sunDi = sunDi;
     }
-    
-    public MealLists(List mon) {
-        mondayBr = mon;
-    }
-    
-    
 
-    public List getMondayBr() {
+    public List<Food> getMondayBr() {
         return mondayBr;
     }
 
-    public void setMondayBr(List mondayBr) {
+    public void setMondayBr(List<Food> mondayBr) {
         this.mondayBr = mondayBr;
     }
 
-    public List getMondayLu() {
+    public List<Food> getMondayLu() {
         return mondayLu;
     }
 
-    public void setMondayLu(List mondayLu) {
+    public void setMondayLu(List<Food> mondayLu) {
         this.mondayLu = mondayLu;
     }
 
-    public List getMondayDi() {
+    public List<Food> getMondayDi() {
         return mondayDi;
     }
 
-    public void setMondayDi(List mondayDi) {
+    public void setMondayDi(List<Food> mondayDi) {
         this.mondayDi = mondayDi;
     }
 
-    public List getTueBr() {
+    public List<Food> getTueBr() {
         return tueBr;
     }
 
-    public void setTueBr(List tueBr) {
+    public void setTueBr(List<Food> tueBr) {
         this.tueBr = tueBr;
     }
 
-    public List getTueLu() {
+    public List<Food> getTueLu() {
         return tueLu;
     }
 
-    public void setTueLu(List tueLu) {
+    public void setTueLu(List<Food> tueLu) {
         this.tueLu = tueLu;
     }
 
-    public List getTueDi() {
+    public List<Food> getTueDi() {
         return tueDi;
     }
 
-    public void setTueDi(List tueDi) {
+    public void setTueDi(List<Food> tueDi) {
         this.tueDi = tueDi;
     }
 
-    public List getWedBr() {
+    public List<Food> getWedBr() {
         return wedBr;
     }
 
-    public void setWedBr(List wedBr) {
+    public void setWedBr(List<Food> wedBr) {
         this.wedBr = wedBr;
     }
 
-    public List getWedLu() {
+    public List<Food> getWedLu() {
         return wedLu;
     }
 
-    public void setWedLu(List wedLu) {
+    public void setWedLu(List<Food> wedLu) {
         this.wedLu = wedLu;
     }
 
-    public List getWedDi() {
+    public List<Food> getWedDi() {
         return wedDi;
     }
 
-    public void setWedDi(List wedDi) {
+    public void setWedDi(List<Food> wedDi) {
         this.wedDi = wedDi;
     }
 
-    public List getThuBr() {
+    public List<Food> getThuBr() {
         return thuBr;
     }
 
-    public void setThuBr(List thuBr) {
+    public void setThuBr(List<Food> thuBr) {
         this.thuBr = thuBr;
     }
 
-    public List getThuLu() {
+    public List<Food> getThuLu() {
         return thuLu;
     }
 
-    public void setThuLu(List thuLu) {
+    public void setThuLu(List<Food> thuLu) {
         this.thuLu = thuLu;
     }
 
-    public List getThuDi() {
+    public List<Food> getThuDi() {
         return thuDi;
     }
 
-    public void setThuDi(List thuDi) {
+    public void setThuDi(List<Food> thuDi) {
         this.thuDi = thuDi;
     }
 
-    public List getFriBr() {
+    public List<Food> getFriBr() {
         return friBr;
     }
 
-    public void setFriBr(List friBr) {
+    public void setFriBr(List<Food> friBr) {
         this.friBr = friBr;
     }
 
-    public List getFriLu() {
+    public List<Food> getFriLu() {
         return friLu;
     }
 
-    public void setFriLu(List friLu) {
+    public void setFriLu(List<Food> friLu) {
         this.friLu = friLu;
     }
 
-    public List getFriDi() {
+    public List<Food> getFriDi() {
         return friDi;
     }
 
-    public void setFriDi(List friDi) {
+    public void setFriDi(List<Food> friDi) {
         this.friDi = friDi;
     }
 
-    public List getSatBr() {
+    public List<Food> getSatBr() {
         return satBr;
     }
 
-    public void setSatBr(List satBr) {
+    public void setSatBr(List<Food> satBr) {
         this.satBr = satBr;
     }
 
-    public List getSatLu() {
+    public List<Food> getSatLu() {
         return satLu;
     }
 
-    public void setSatLu(List satLu) {
+    public void setSatLu(List<Food> satLu) {
         this.satLu = satLu;
     }
 
-    public List getSatDi() {
+    public List<Food> getSatDi() {
         return satDi;
     }
 
-    public void setSatDi(List satDi) {
+    public void setSatDi(List<Food> satDi) {
         this.satDi = satDi;
     }
 
-    public List getSunBr() {
+    public List<Food> getSunBr() {
         return sunBr;
     }
 
-    public void setSunBr(List sunBr) {
+    public void setSunBr(List<Food> sunBr) {
         this.sunBr = sunBr;
     }
 
-    public List getSunLu() {
+    public List<Food> getSunLu() {
         return sunLu;
     }
 
-    public void setSunLu(List sunLu) {
+    public void setSunLu(List<Food> sunLu) {
         this.sunLu = sunLu;
     }
 
-    public List getSunDi() {
+    public List<Food> getSunDi() {
         return sunDi;
     }
 
-    public void setSunDi(List sunDi) {
+    public void setSunDi(List<Food> sunDi) {
         this.sunDi = sunDi;
     }
+
+    
     
 }
