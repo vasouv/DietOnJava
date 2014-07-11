@@ -20,19 +20,18 @@ import java.io.IOException;
 public class FileHandling {
     
     public void writeJSONFile(String jsonString, String filename) throws IOException {
-        FileWriter fileWriter = null;
-        File newJSONFile = new File(filename);
-        fileWriter = new FileWriter(newJSONFile);
-        fileWriter.write(jsonString);
-        fileWriter.close();
+        try (FileWriter fileWriter = new FileWriter(new File(filename))) {
+            fileWriter.write(jsonString);
+        }
     }
     
     public String readJSONFile(String filename) throws FileNotFoundException, IOException {
         StringBuilder willBeReturned = new StringBuilder();
-        BufferedReader fileReader = new BufferedReader(new FileReader(filename));
-        String currentLine;
-        while((currentLine = fileReader.readLine()) != null) {
-            willBeReturned.append(currentLine);
+        try (BufferedReader fileReader = new BufferedReader(new FileReader(filename))) {
+            String currentLine;
+            while((currentLine = fileReader.readLine()) != null) {
+                willBeReturned.append(currentLine);
+            }
         }
         return willBeReturned.toString().trim();
     }
